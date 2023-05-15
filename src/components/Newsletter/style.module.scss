@@ -1,0 +1,137 @@
+.Newsletter {
+   position: relative;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   overflow: hidden;
+
+   padding: 144px 50px;
+   background: var(--primary);
+
+   // tablet large
+   @media (max-width: 1200px) {
+      padding: 144px 24px;
+   }
+
+   // tablet
+   @media (max-width: 960px) {
+      flex-direction: column;
+      padding: 144px 24px;
+   }
+}
+
+.left {
+   width: 47%;
+   z-index: 1;
+
+   // tablet
+   @media (max-width: 960px) {
+      width: 100%;
+   }
+
+   & > h6 {
+      font-size: 1rem;
+      margin-bottom: 1.1rem;
+      letter-spacing: 1px;
+   }
+
+   & > h1 {
+      font-size: 5rem;
+      margin-bottom: 1.1rem;
+      letter-spacing: 0.25rem;
+
+      // tablet large
+      @media (max-width: 1200px) {
+         font-size: 50px;
+      }
+
+      // tablet
+      @media (max-width: 768px) {
+         font-size: 36px;
+      }
+   }
+
+   & > p {
+      width: 85%;
+      max-width: 463px;
+      font-size: 1rem;
+      font-family: 'Source Sans Pro', sans-serif;
+      margin-bottom: 1.1rem;
+
+      // tablet
+      @media (max-width: 960px) {
+         width: 100%;
+         max-width: none;
+         margin-bottom: 3.8rem;
+      }
+   }
+}
+
+.right {
+   width: 53%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 1;
+
+   // tablet
+   @media (max-width: 960px) {
+      width: 100%;
+   }
+
+   & > .form {
+      width: 100%;
+      display: flex;
+
+      // tablet
+      @media (max-width: 768px) {
+         flex-direction: column;
+         width: 100%;
+      }
+
+      & > input {
+         flex: 1;
+         height: 50px;
+         padding: 0 25px;
+         margin: 0 30px 8px 0;
+         background: #fff;
+         font-size: 0.9rem;
+
+         &::placeholder {
+            color: #aaa;
+         }
+
+         // tablet
+         @media (max-width: 768px) {
+            flex: auto;
+            margin: 0 0 1rem 0;
+         }
+      }
+
+      & > button {
+         width: 184px;
+         height: 50px;
+         font-size: 14px;
+         font-weight: 700;
+         padding: 0 10px;
+         border: 2px solid #000;
+
+         // tablet
+         @media (max-width: 768px) {
+            width: 100%;
+         }
+      }
+   }
+}
+
+.textBackground {
+   position: absolute;
+   bottom: -43%;
+
+   color: #10e0a5;
+   font-size: 500px;
+   font-weight: 700;
+   z-index: 0;
+   letter-spacing: 0.05em;
+}

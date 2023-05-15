@@ -1,0 +1,401 @@
+.Header {
+   --header-height-1: 85px;
+
+   display: flex;
+   align-items: center;
+
+   width: 100%;
+   height: var(--header-height-1);
+   padding: 0 21px;
+   background-color: #fff;
+
+   &.fixed {
+      --header-height-2: 55px;
+
+      position: fixed;
+      top: calc(-1 * var(--header-height-2));
+      height: var(--header-height-2);
+      padding: 0 21px;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.15);
+      transition: all 0.2s linear;
+      z-index: 3;
+
+      &.show {
+         top: 0;
+      }
+   }
+
+   // tablet
+   @media (max-width: 1024px) {
+      & > .socialWrap,
+      & > .languages {
+         display: none;
+      }
+   }
+}
+
+.logo {
+   height: 35px;
+   margin-right: auto;
+   padding: 0 5px;
+
+   & > img {
+      height: 100%;
+   }
+}
+
+.socialWrap {
+   display: flex;
+   align-items: center;
+   padding: 0 10px;
+
+   & > a > img {
+      display: flex;
+      align-items: center;
+      width: 16px;
+
+      margin: 0 7.5px;
+   }
+}
+
+.languages {
+   position: relative;
+
+   display: flex;
+   align-items: center;
+
+   padding: 0 10px;
+   font-family: 'Source Sans Pro', sans-serif;
+   font-size: 14px;
+   cursor: pointer;
+
+   & > .dropIcon {
+      margin-left: 4px;
+      font-size: 9px;
+      transition: transform 0.2s ease-in-out;
+   }
+
+   &:hover {
+      & > .dropIcon {
+         transform: rotate(180deg);
+      }
+   }
+
+   // dropdown body
+   & > .dropDownBody {
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px 20px;
+
+      display: none;
+      flex-direction: column;
+      box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.15);
+
+      line-height: 28px;
+      font-family: 'Source Sans Pro', sans-serif;
+
+      & > a {
+         transition: all 0.2s ease-in-out;
+
+         &:hover {
+            color: var(--primary);
+         }
+      }
+
+      &.show {
+         animation: floatUp 0.6s ease-in-out;
+      }
+
+      &.hide {
+         animation: floatDown 0.6s ease-in-out;
+      }
+   }
+}
+
+.navIcon {
+   position: relative;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   height: 25px;
+   width: 44px;
+   cursor: pointer;
+
+   & > svg > path {
+      transition: all 0.3s ease-in-out;
+   }
+
+   &:hover > svg > path {
+      fill: var(--primary);
+   }
+
+   &.menuBtn > div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 18px;
+      height: 1.6px;
+      background: #000;
+
+      &:nth-of-type(1) {
+         transform: translate(-50%, -6px);
+      }
+
+      &:nth-of-type(2) {
+         transform: translate(-50%, 0);
+      }
+
+      &:nth-of-type(3) {
+         transform: translate(-50%, 6px);
+      }
+   }
+}
+
+// MENU MODAL
+.menuModal {
+   position: fixed;
+   top: 0;
+   left: 0;
+
+   display: none;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   height: 100vh;
+   background: rgba(255, 255, 255, 0.96);
+
+   &.show {
+      animation: fadeIn 0.3s ease-in-out;
+   }
+
+   &.hide {
+      animation: fadeOut 0.3s ease-in-out;
+   }
+}
+
+.closeBtnWrap {
+   position: absolute;
+   top: 0;
+   right: 0;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   height: var(--header-height-1);
+   width: var(--header-height-1);
+}
+
+.closeBtn {
+   position: relative;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 4px;
+   width: 36px;
+   height: 30px;
+
+   & > div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 18px;
+      height: 1.6px;
+      background: var(--primary);
+      transition: all 1s ease-in-out;
+
+      &:nth-of-type(1) {
+         transform: translate(-50%, -6px);
+      }
+
+      &:nth-of-type(2) {
+         transform: translate(-50%, 0);
+      }
+
+      &:nth-of-type(3) {
+         transform: translate(-50%, 6px);
+      }
+   }
+
+   &.show > div {
+      &:nth-of-type(1) {
+         animation: closeBtn1 0.3s ease-in-out 0.2s forwards;
+      }
+
+      &:nth-of-type(2) {
+         animation: closeBtn2 0.3s ease-in-out 0.2s forwards;
+      }
+
+      &:nth-of-type(3) {
+         animation: closeBtn3 0.3s ease-in-out 0.2s forwards;
+      }
+   }
+
+   &.hide > div {
+      &:nth-of-type(1) {
+         animation: closeBtn1-1 0.2s ease-in-out;
+      }
+
+      &:nth-of-type(2) {
+         animation: closeBtn2-1 0.2s ease-in-out;
+      }
+
+      &:nth-of-type(3) {
+         animation: closeBtn3-1 0.2s ease-in-out;
+      }
+   }
+}
+
+.menuBody {
+   width: 100%;
+   text-align: center;
+
+   & > li {
+      width: 100%;
+      height: 64px;
+      line-height: 64px;
+
+      & > a {
+         font-size: 2rem;
+         font-weight: 700;
+         transition: all 0.3s ease-in-out;
+
+         &.active {
+            color: var(--primary);
+         }
+
+         &:hover {
+            color: var(--primary);
+         }
+      }
+   }
+
+   &.show {
+      animation: floatIn 0.3s ease-in;
+   }
+
+   &.hide {
+      animation: floatOut 0.3s ease-in;
+   }
+}
+
+// animations
+@keyframes floatUp {
+   from {
+      opacity: 0;
+      transform: translate(-50%, 50px);
+   }
+   to {
+      opacity: 1;
+      transform: translate(-50%, 0);
+   }
+}
+@keyframes floatDown {
+   from {
+      opacity: 1;
+      transform: translate(-50%, 0);
+   }
+   to {
+      opacity: 0;
+      transform: translate(-50%, 50px);
+   }
+}
+
+@keyframes floatIn {
+   from {
+      opacity: 0;
+      transform: translateY(-4em);
+   }
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+@keyframes floatOut {
+   from {
+      opacity: 1;
+      transform: translateY(0);
+   }
+   to {
+      opacity: 0;
+      transform: translateY(4em);
+   }
+}
+
+@keyframes fadeIn {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
+}
+@keyframes fadeOut {
+   from {
+      opacity: 1;
+   }
+   to {
+      opacity: 0;
+   }
+}
+
+@keyframes closeBtn1 {
+   from {
+      transform: translate(-50%, -6px);
+   }
+   to {
+      transform: translate(-50%, -50%) rotate(45deg);
+   }
+}
+@keyframes closeBtn2 {
+   from {
+      opacity: 1;
+   }
+   to {
+      opacity: 0;
+   }
+}
+@keyframes closeBtn3 {
+   from {
+      transform: translate(-50%, 6px);
+   }
+   to {
+      transform: translate(-50%, -50%) rotate(-45deg);
+   }
+}
+
+@keyframes closeBtn1-1 {
+   from {
+      transform: translate(-50%, -50%) rotate(45deg);
+   }
+   to {
+      transform: translate(-50%, -6px);
+   }
+}
+
+@keyframes closeBtn2-1 {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
+}
+
+@keyframes closeBtn3-1 {
+   from {
+      transform: translate(-50%, -50%) rotate(-45deg);
+   }
+   to {
+      transform: translate(-50%, 6px);
+   }
+}
