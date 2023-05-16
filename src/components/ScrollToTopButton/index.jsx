@@ -1,12 +1,13 @@
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+import React, { memo, useCallback, useEffect, useRef, useState } from 'react'
 import styles from './styles.module.scss'
 
 function ScrollToTopButton() {
    const scrollBtnRef = useRef(null)
    const [show, setShow] = useState(false)
 
+   // show/hide scroll-to-top-btn
    const handleScroll = useCallback(() => {
       if (window.pageYOffset > 100) {
          if (!show) {
@@ -28,6 +29,12 @@ function ScrollToTopButton() {
       }
    }, [show])
 
+   // scroll to top onclick
+   const handleScrollToTop = useCallback(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+   }, [])
+
+   // scroll event
    useEffect(() => {
       window.addEventListener('scroll', handleScroll)
 
@@ -36,10 +43,6 @@ function ScrollToTopButton() {
       }
    }, [handleScroll])
 
-   const handleScrollToTop = useCallback(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth' })
-   }, [])
-
    return (
       <div className={styles.ScrollToTopButton} ref={scrollBtnRef} onClick={handleScrollToTop}>
          <FontAwesomeIcon icon={faChevronUp} />
@@ -47,4 +50,4 @@ function ScrollToTopButton() {
    )
 }
 
-export default ScrollToTopButton
+export default memo(ScrollToTopButton)

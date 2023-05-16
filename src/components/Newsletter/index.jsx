@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import styles from './style.module.scss'
 
 function Newsletter() {
@@ -25,4 +25,4 @@ function Newsletter() {
    )
 }
 
-export default Newsletter
+export default memo(Newsletter)

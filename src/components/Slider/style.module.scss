@@ -1,0 +1,158 @@
+.Slider {
+   position: relative;
+   overflow: hidden;
+
+   // mobile
+   @media (max-width: 768px) {
+      & > .slideBtn {
+         display: none;
+      }
+
+      & > .slidePagination {
+         display: block;
+      }
+   }
+}
+
+.slideBtn {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   font-size: 2rem;
+   color: #fff;
+   transition: all 0.3s ease-in-out;
+
+   &:hover {
+      color: #000;
+   }
+
+   &:nth-of-type(1) {
+      right: 1%;
+   }
+
+   &:nth-of-type(2) {
+      left: 1%;
+   }
+}
+
+.slidePagination {
+   display: none;
+
+   position: absolute;
+   bottom: 3%;
+   left: 50%;
+   transform: translateX(-50%);
+
+   & > button {
+      width: 15px;
+      height: 15px;
+      margin: 0 4px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+         background: #fff;
+      }
+   }
+}
+
+.slideTrack {
+   display: flex;
+   width: 100%;
+   height: 740px;
+
+   margin-left: -100%;
+
+   transition: all 0.5s ease-in-out;
+}
+
+.slide {
+   width: 100%;
+   flex-shrink: 0;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   height: 100%;
+
+   background-size: cover;
+}
+
+.slideBody {
+   max-width: 1148px;
+   margin: 0 60px;
+
+   // mobile
+   @media (max-width: 768px) {
+      margin: 0 24px;
+   }
+
+   & > .categories {
+      display: inline-block;
+      height: 24px;
+      line-height: 24px;
+      padding: 0 10px;
+      color: #fff;
+      background: #000;
+
+      & > a {
+         position: relative;
+         font-family: 'Source Sans Pro', sans-serif;
+         font-size: 14px;
+
+         &:hover::after {
+            opacity: 1;
+         }
+
+         &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+
+            height: 1px;
+            width: 100%;
+            background: #fff;
+            opacity: 0;
+            transition: all 0.2s ease-in-out;
+         }
+      }
+   }
+
+   & > h1 {
+      margin: 70px 0;
+      color: var(--primary);
+
+      font-size: 50px;
+      letter-spacing: 2.5px;
+
+      // tablet
+      @media (max-width: 1200px) {
+         font-size: 36px;
+         margin: 50px 0;
+      }
+
+      // mobile
+      @media (max-width: 768px) {
+         font-size: 28px;
+         margin: 40px 0;
+      }
+   }
+
+   & > button {
+      width: 128px;
+      height: 40px;
+      color: #fff;
+      border: 2px solid #fff;
+      font-weight: 700;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+         background: #fff;
+         color: #000;
+      }
+   }
+}

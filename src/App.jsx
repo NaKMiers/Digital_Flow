@@ -19,8 +19,6 @@ function App() {
          <Header />
          <Header fixed />
 
-         <div style={{ height: '200vh' }}></div>
-
          <Routes>
             <Route path='/' exact element={<HomePage />} />
             <Route path='/agency' exact element={<AgencyPage />} />

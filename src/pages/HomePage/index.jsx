@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { memo } from 'react'
 import styles from './style.module.scss'
+import Slider from '../../components/Slider'
 
 function HomePage() {
-   return <div>HomePage</div>
+   return (
+      <div className={styles.HomePage}>
+         HomePage
+         <Slider />
+      </div>
+   )
 }
 
-export default HomePage
+export default memo(HomePage)

@@ -1,6 +1,6 @@
 import { faChevronDown, faPhone, faSearch } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+import React, { memo, useCallback, useEffect, useRef, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import facebook from '../../assets/imgs/facebook.png'
 import instagram from '../../assets/imgs/instagram.png'
@@ -67,7 +67,7 @@ function Header({ fixed }) {
       }, 590) // duration: 0.6s
    }, [])
 
-   const handleShowMenu = () => {
+   const handleShowMenu = useCallback(() => {
       setOpenMenu(true)
       menuModalRef.current.classList.remove(styles.hide)
       menuModalRef.current.style.display = 'flex'
@@ -78,9 +78,9 @@ function Header({ fixed }) {
 
       closeBtnRef.current.classList.remove(styles.hide)
       closeBtnRef.current.classList.add(styles.show)
-   }
+   }, [])
 
-   const handleHideMenu = () => {
+   const handleHideMenu = useCallback(() => {
       // animation: overlay and body
       menuModalRef.current.classList.remove(styles.show)
       menuModalRef.current.classList.add(styles.hide)
@@ -95,7 +95,7 @@ function Header({ fixed }) {
       closeBtnRef.current.classList.add(styles.hide)
 
       setOpenMenu(false)
-   }
+   }, [])
 
    return (
       <header className={`${styles.Header} ${fixed ? styles.fixed : ''}`} ref={headerRef}>
@@ -201,4 +201,4 @@ function Header({ fixed }) {
    )
 }
 
-export default Header
+export default memo(Header)
