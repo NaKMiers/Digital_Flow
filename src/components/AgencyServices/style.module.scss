@@ -1,0 +1,135 @@
+.AgencyServices {
+   background: #000;
+}
+
+.top {
+   padding: 90px 0;
+
+   & > h6 {
+      max-width: 1170px;
+      margin: auto;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 36px 0 64px 0;
+      color: var(--primary);
+      letter-spacing: 0.05em;
+
+      // tablet
+      @media (max-width: 1200px) {
+         margin: 0 21px;
+      }
+   }
+
+   & > div {
+      display: flex;
+      height: 84px;
+
+      & > div:nth-of-type(1) {
+         flex-grow: 1;
+         max-width: 212px;
+         height: 100%;
+         background: url('../../assets/imgs/plusBackground.webp') no-repeat;
+
+         // tablet
+         @media (max-width: 768px) {
+            max-width: 0;
+         }
+      }
+
+      & > div:nth-of-type(2) {
+         margin-top: -0.55em;
+         height: 100%;
+         width: 600px;
+         margin-left: 50px;
+
+         // tablet
+         @media (max-width: 1200px) {
+            margin: -0.55em 21px;
+         }
+
+         & > span {
+            display: inline-block;
+            line-height: 1.55em;
+            color: #fff;
+            font-size: 24px;
+            font-weight: 300;
+            font-family: 'Source Sans Pro', sans-serif;
+         }
+      }
+   }
+}
+
+.bottom {
+   padding-top: 24px;
+   padding-bottom: 50px;
+}
+
+.servicesWrap {
+   display: flex;
+   flex-wrap: wrap;
+
+   max-width: 1212px;
+   width: 100%;
+   padding: 60px 0 60px;
+   margin: 0 auto;
+   background: #000;
+}
+
+.serviceItem {
+   width: 25%;
+   display: block;
+   padding: 0 21px;
+   margin-bottom: 42px;
+
+   // pc
+   @media (min-width: 1201px) {
+      &:nth-child(even) {
+         margin-top: -60px;
+      }
+   }
+
+   // tablet
+   @media (max-width: 980px) {
+      width: 50%;
+   }
+
+   // mobile small
+   @media (max-width: 548px) {
+      width: 100%;
+   }
+}
+
+.service {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+   padding: 50px 25px;
+   border: 1px solid #383838;
+
+   & > .image {
+      width: 48px;
+      margin-bottom: 24px;
+
+      & > img {
+         width: 100%;
+      }
+   }
+
+   & > .content {
+      text-align: center;
+      color: #777777;
+
+      & > p:nth-of-type(1) {
+         font-size: 20px;
+         margin-bottom: 14px;
+         font-weight: 800;
+      }
+
+      & > p:nth-of-type(2) {
+         font-size: 14px;
+         font-weight: 700;
+      }
+   }
+}

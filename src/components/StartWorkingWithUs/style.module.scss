@@ -1,0 +1,70 @@
+.StartWorkingWithUs {
+   position: relative;
+   overflow: hidden;
+
+   background: url('../../assets//imgs/greenBackground.webp') no-repeat center / cover;
+   padding: 142px 25px 166px 25px;
+
+   // tablet
+   @media (max-width: 1200px) {
+      padding: 136px 0px 170px 0px;
+   }
+}
+
+.sectionBody {
+   position: relative;
+   z-index: 1;
+
+   & > h6 {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+
+      margin: 0 25px;
+      margin-bottom: 1.3em;
+   }
+
+   & > h1 {
+      line-height: 1.125em;
+      font-size: 80px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+
+      margin: 0 25px;
+      margin-bottom: 90px;
+
+      // tablet
+      @media (max-width: 1200px) {
+         font-size: 50px;
+         line-height: 1.4em;
+      }
+
+      // tablet
+      @media (max-width: 768px) {
+         font-size: 36px;
+         line-height: 1.4em;
+         margin-right: 0;
+      }
+   }
+
+   & > button {
+      height: 50px;
+      padding: 0 25px;
+      border: 2px solid #000;
+      margin: 0 25px;
+
+      font-size: 19px;
+      font-weight: 700;
+   }
+}
+
+.textBackground {
+   position: absolute;
+   bottom: -27%;
+   left: -250px;
+
+   font-size: 500px;
+   font-weight: 700;
+   letter-spacing: 0.05em;
+   color: #10e0a5;
+}

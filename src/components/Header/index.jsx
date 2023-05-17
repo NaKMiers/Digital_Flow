@@ -107,22 +107,22 @@ function Header({ fixed }) {
          {/* SOCIALS */}
          <div className={styles.socialWrap}>
             <a href='https://twitter.com' target='_blank' rel='noreferrer'>
-               <img src={twitter} alt='' />
+               <img src={twitter} alt='twitter' />
             </a>
             <a href='https://www.facebook.com' target='_blank' rel='noreferrer'>
-               <img src={facebook} alt='' />
+               <img src={facebook} alt='facebook' />
             </a>
             <a href='https://vimeo.com' target='_blank' rel='noreferrer'>
-               <img src={vimeo} alt='' />
+               <img src={vimeo} alt='vimeo' />
             </a>
             <a href='https://www.instagram.com' target='_blank' rel='noreferrer'>
-               <img src={instagram} alt='' />
+               <img src={instagram} alt='instagram' />
             </a>
             <a href='https://www.youtube.com' target='_blank' rel='noreferrer'>
-               <img src={youtube} alt='' />
+               <img src={youtube} alt='youtube' />
             </a>
             <a href='https://www.pinterest.com' target='_blank' rel='noreferrer'>
-               <img src={pinterest} alt='' />
+               <img src={pinterest} alt='pinterest' />
             </a>
          </div>
 

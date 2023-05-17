@@ -62,7 +62,7 @@ function Slider() {
    }, [slide, sliding])
 
    return (
-      <div className={styles.Slider}>
+      <section className={styles.Slider}>
          <button className={styles.slideBtn} onClick={nextSlide}>
             <FontAwesomeIcon icon={faAngleRight} />
          </button>
@@ -94,7 +94,7 @@ function Slider() {
                </div>
             ))}
          </div>
-      </div>
+      </section>
    )
 }
 

@@ -7,7 +7,6 @@
    width: 100%;
    height: var(--header-height-1);
    padding: 0 21px;
-   background-color: #fff;
 
    &.fixed {
       --header-height-2: 55px;
@@ -28,10 +27,17 @@
 
    // tablet
    @media (max-width: 1024px) {
+      --header-height-1: 75px;
+
       & > .socialWrap,
       & > .languages {
          display: none;
       }
+   }
+
+   // tablet
+   @media (max-width: 980px) {
+      --header-height-1: 70px;
    }
 }
 
@@ -42,6 +48,11 @@
 
    & > img {
       height: 100%;
+   }
+
+   // tablet
+   @media (max-width: 980px) {
+      height: 28px;
    }
 }
 
