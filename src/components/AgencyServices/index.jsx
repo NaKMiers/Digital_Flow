@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import styles from './style.module.scss'
 import service1 from '../../assets/imgs/service1.png'
 import service2 from '../../assets/imgs/service2.png'
@@ -137,4 +137,4 @@ function AgencyServices() {
    )
 }
 
-export default AgencyServices
+export default memo(AgencyServices)
