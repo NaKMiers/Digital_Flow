@@ -6,12 +6,14 @@ import Slider from '../../components/Slider'
 import StartWorkingWithUs from '../../components/StartWorkingWithUs'
 import VideoBackground from '../../components/VideoBackground'
 import styles from './style.module.scss'
+import RecentWork from '../../components/RecentWork'
 
 function HomePage() {
    return (
       <div className={styles.HomePage}>
          <PageHeader />
          <Slider />
+         <RecentWork />
          <Quote />
          <StartWorkingWithUs />
          <AgencyServices />

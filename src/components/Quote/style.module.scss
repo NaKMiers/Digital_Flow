@@ -51,6 +51,8 @@
    }
 
    & > span:nth-of-type(1) {
+      display: inline-block;
+      margin-top: -0.4em;
       line-height: 1.5em;
       font-size: 24px;
       font-weight: 300;
