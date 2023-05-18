@@ -6,6 +6,17 @@ import recentWork2 from '../assets/imgs/recentWork2.jpg'
 import recentWork3 from '../assets/imgs/recentWork3.jpg'
 import recentWork4 from '../assets/imgs/recentWork4.jpg'
 
+import brand1 from '../assets/imgs/brand1.jpg'
+import brand2 from '../assets/imgs/brand2.jpg'
+import brand3 from '../assets/imgs/brand3.jpg'
+import brand4 from '../assets/imgs/brand4.jpg'
+import brand5 from '../assets/imgs/brand5.jpg'
+import brand6 from '../assets/imgs/brand6.jpg'
+import brand7 from '../assets/imgs/brand7.jpg'
+import brand8 from '../assets/imgs/brand8.jpg'
+import brand9 from '../assets/imgs/brand9.jpg'
+import brand10 from '../assets/imgs/brand10.jpg'
+
 // slides
 export const oriSlides = [
    {
@@ -54,4 +65,18 @@ export const recentWorks = [
       date: '4 November, 2020 in',
       category: 'Graphic',
    },
+]
+
+// our clients
+export const clientBrands = [
+   brand1,
+   brand2,
+   brand3,
+   brand4,
+   brand5,
+   brand6,
+   brand7,
+   brand8,
+   brand9,
+   brand10,
 ]

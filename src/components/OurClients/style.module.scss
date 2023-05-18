@@ -1,0 +1,112 @@
+.OurClients {
+   overflow: hidden;
+}
+
+.container {
+   max-width: 1212px;
+   margin: 0 auto;
+   padding: 120px 0 110px;
+}
+
+.top {
+   padding: 0 21px;
+   padding-bottom: 60px;
+
+   & > h6 {
+      line-height: 1.4em;
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: 0.05em;
+      margin-bottom: 1.1em;
+
+      // tablet
+      @media (max-width: 1200px) {
+         margin-bottom: 1.5em;
+      }
+   }
+
+   & > h1 {
+      font-size: 80px;
+      letter-spacing: 0.05em;
+      margin-bottom: 58px;
+
+      // tablet
+      @media (max-width: 1200px) {
+         font-size: 50px;
+         margin-bottom: 66px;
+      }
+
+      // tablet
+      @media (max-width: 1200px) {
+         font-size: 36px;
+      }
+   }
+
+   & > p {
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 1.54em;
+      font-family: 'Source Sans Pro', sans-serif;
+   }
+}
+
+.middle {
+   & > p {
+      display: inline-block;
+      font-size: 16px;
+      font-family: 'Source Sans Pro', sans-serif;
+      color: #a2b1b1;
+      padding: 0 21px 20px;
+      line-height: 1.55em;
+      width: 50%;
+
+      // tablet
+      @media (max-width: 980px) {
+         width: 100%;
+      }
+   }
+}
+
+.bottom {
+   padding: 60px 21px 21px;
+}
+
+.brandWrap {
+   display: flex;
+   flex-wrap: wrap;
+   margin: 0 -5px;
+}
+
+.brandItem {
+   width: 20%;
+   padding: 0 5px 10px;
+
+   // mobile
+   @media (max-width: 500px) {
+      width: 50%;
+   }
+}
+
+.image {
+   position: relative;
+   display: block;
+   width: 100%;
+   padding-top: 100%;
+   border: 1px solid #efefef;
+   transition: all 0.3s ease-in-out;
+
+   &:hover {
+      border-color: #000;
+   }
+
+   & > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+   }
+}

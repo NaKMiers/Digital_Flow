@@ -1,6 +1,6 @@
 import { faCamera, faClapperboard, faFileAlt, faLink } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { useRef } from 'react'
+import React, { memo, useCallback, useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import styles from './style.module.scss'
 
@@ -9,17 +9,17 @@ function WorkItem({ data }) {
    const overlayRef = useRef(null)
    const iconWrapRef = useRef(null)
 
-   const handleMouseOver = () => {
+   const handleMouseOver = useCallback(() => {
       overlayRef.current.style.opacity = 1
       iconWrapRef.current.classList.remove(styles.hide)
       iconWrapRef.current.classList.add(styles.show)
-   }
+   }, [])
 
-   const handleMouseLeave = () => {
+   const handleMouseLeave = useCallback(() => {
       overlayRef.current.style.opacity = 0
       iconWrapRef.current.classList.remove(styles.show)
       iconWrapRef.current.classList.add(styles.hide)
-   }
+   }, [])
 
    return (
       <div
@@ -61,4 +61,4 @@ function WorkItem({ data }) {
    )
 }
 
-export default WorkItem
+export default memo(WorkItem)

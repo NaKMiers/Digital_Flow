@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import RecentWorkItem from './RecentWorkItem'
 import styles from './style.module.scss'
 import { recentWorks } from '../../data'
@@ -38,4 +38,4 @@ function RecentWork() {
    )
 }
 
-export default RecentWork
+export default memo(RecentWork)
