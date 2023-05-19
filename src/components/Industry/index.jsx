@@ -5,12 +5,15 @@ import image1 from '../../assets/imgs/image1.webp'
 import image2 from '../../assets/imgs/image2.webp'
 import { imageLinkItems } from '../../data'
 import ImageLinkItem from './ImageLinkItem'
+import ImageLinkModal from './ImageLinkModal'
 import styles from './style.module.scss'
 
 function Industry() {
    const [slide, setSlide] = useState(1)
    const [sliding, setSliding] = useState(false)
    const slideTrackRef = useRef(null)
+
+   const [imageIndex, setImageIndex] = useState(NaN)
 
    useEffect(() => {
       slideTrackRef.current.style.marginLeft = `calc(-100% * ${slide})`
@@ -96,19 +99,19 @@ function Industry() {
    return (
       <section className={styles.Industry}>
          <div className={styles.container}>
-            <div className={`${styles.item} ${styles.item1}`}>
-               <img src={image1} alt='item' />
+            <div className={styles.imageItem}>
+               <img src={image1} alt='img' />
             </div>
 
-            <div className={`${styles.item} ${styles.item2}`}>
+            <div className={styles.progressItem}>
                <p className={styles.text}>
                   Lorem Ipsum proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
                   quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis
                   sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
                </p>
 
-               <div className={styles.progress}>
-                  <div className={styles.progressItem}>
+               <div className={styles.progressWrap}>
+                  <div className={styles.progress}>
                      <div className={styles.progressLabel}>
                         <span>Programming</span>
                         <span>73%</span>
@@ -117,7 +120,7 @@ function Industry() {
                         <div style={{ width: '73%' }} />
                      </div>
                   </div>
-                  <div className={styles.progressItem}>
+                  <div className={styles.progress}>
                      <div className={styles.progressLabel}>
                         <span>Marketing</span>
                         <span>48%</span>
@@ -126,7 +129,7 @@ function Industry() {
                         <div style={{ width: '48%' }} />
                      </div>
                   </div>
-                  <div className={styles.progressItem}>
+                  <div className={styles.progress}>
                      <div className={styles.progressLabel}>
                         <span>Design</span>
                         <span>65%</span>
@@ -138,7 +141,7 @@ function Industry() {
                </div>
             </div>
 
-            <div className={`${styles.item} ${styles.item3}`}>
+            <div className={styles.sliderItem}>
                <div className={styles.slider}>
                   <button className={`${styles.slideBtn} ${styles.nextBtn}`} onClick={nextSlide}>
                      <FontAwesomeIcon icon={faChevronRight} />
@@ -202,14 +205,58 @@ function Industry() {
                </div>
             </div>
 
-            <div className={`${styles.item} ${styles.item4}`}>
-               <img src={image2} alt='item' />
+            <div className={styles.imageItem}>
+               <img src={image2} alt='img' />
             </div>
 
-            <div className={styles.item5}>
+            <div className={styles.imageLinkItem}>
                {imageLinkItems.map((link, index) => (
-                  <ImageLinkItem data={link} key={index} />
+                  <ImageLinkItem data={link} key={index} index={index} openImageModal={setImageIndex} />
                ))}
+
+               {/* <div className={styles.imageModal} ref={imageModalRef}>
+                  <div className={styles.number}>
+                     {imageIndex + 1}/{imageLinkItems.length}
+                  </div>
+                  <div className={styles.buttonWrap}>
+                     <button>
+                        <FontAwesomeIcon icon={faSearch} />
+                     </button>
+                     <button>
+                        <FontAwesomeIcon icon={faPlay} />
+                     </button>
+                     <button>
+                        <FontAwesomeIcon icon={faX} onClick={handleCloseImageModal} />
+                     </button>
+                  </div>
+
+                  <button
+                     className={`${styles.modalBtn} ${styles.nextBtn}`}
+                     onClick={() =>
+                        imageIndex === 0
+                           ? setImageIndex(imageLinkItems.length - 1)
+                           : setImageIndex(imageIndex - 1)
+                     }
+                  >
+                     <FontAwesomeIcon icon={faArrowLeft} />
+                  </button>
+                  <button
+                     className={`${styles.modalBtn} ${styles.prevBtn}`}
+                     onClick={() =>
+                        imageIndex === imageLinkItems.length - 1
+                           ? setImageIndex(0)
+                           : setImageIndex(imageIndex + 1)
+                     }
+                  >
+                     <FontAwesomeIcon icon={faArrowRight} />
+                  </button>
+
+                  <div className={styles.imageModalBody} ref={imageModalBodyref}>
+                     <img src={imageLinkItems[imageIndex]} alt='img' onClick={handleZomeIn} />
+                  </div>
+               </div> */}
+
+               <ImageLinkModal index={imageIndex} setImageIndex={setImageIndex} />
             </div>
          </div>
       </section>

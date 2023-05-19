@@ -7,47 +7,45 @@
    flex-wrap: wrap;
 }
 
-.item {
+.imageItem {
    width: 50%;
+   height: 660px;
+
+   & > img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+   }
 
    // tablet
    @media (max-width: 980px) {
       width: 100%;
    }
+}
 
-   &.item1,
-   &.item4 {
-      height: 660px;
+.progressItem {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 50px;
 
-      & > img {
-         height: 100%;
-         width: 100%;
-         object-fit: cover;
-         object-position: center;
-      }
+   width: 50%;
+   height: 660px;
+
+   background-color: #000;
+   padding: 60px 100px;
+
+   // tablet
+   @media (max-width: 1200px) {
+      padding: 60px 21px;
    }
 
-   &.item2 {
-      height: 660px;
-
-      // tablet
-      @media (max-width: 980px) {
-         height: auto;
-      }
-
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 50px;
-
-      background-color: #000;
-      padding: 60px 100px;
-
-      // tablet
-      @media (max-width: 1200px) {
-         padding: 60px 21px;
-      }
+   // tablet
+   @media (max-width: 980px) {
+      width: 100%;
+      height: auto;
    }
 }
 
@@ -59,13 +57,13 @@
    color: #fff;
 }
 
-.progress {
+.progressWrap {
    width: 100%;
    padding: 5px 0 36px;
    color: #fff;
 }
 
-.progressItem {
+.progress {
    padding-top: 14px;
 
    &:not(:first-child) {
@@ -108,8 +106,8 @@
    }
 }
 
-// item 3
-.item3 {
+.sliderItem {
+   width: 50%;
    height: 660px;
 
    display: flex;
@@ -122,13 +120,17 @@
    @media (max-width: 1200px) {
       padding: 60px 21px 0;
    }
+
+   // tablet
+   @media (max-width: 980px) {
+      width: 100%;
+   }
 }
 
 .slider {
    position: relative;
    height: 100%;
    width: 100%;
-   // background-color: #fff;
    overflow: hidden;
 }
 
@@ -180,7 +182,6 @@
       padding: 35px 0 20px;
       font-size: 24px;
       font-weight: 700;
-      // background: pink;
    }
 
    & > p:nth-of-type(2) {
@@ -188,7 +189,6 @@
       font-size: 14px;
       font-weight: 300;
       font-family: 'Source Sans Pro', sans-serif;
-      // background: yellowgreen;
    }
 
    & > p:nth-of-type(3) {
@@ -197,7 +197,6 @@
       font-size: 24px;
       font-weight: 300;
       font-family: 'Source Sans Pro', sans-serif;
-      // background: yellow;
 
       // mobile
       @media (max-width: 600px) {
@@ -213,8 +212,7 @@
    }
 }
 
-// item 5
-.item5 {
+.imageLinkItem {
    display: flex;
    flex-wrap: wrap;
    width: 100%;
@@ -292,5 +290,185 @@
    to {
       opacity: 1;
       transform: translate(-50%, -50%);
+   }
+}
+
+.imageModal {
+   position: fixed;
+   top: 0;
+   left: 0;
+
+   display: none;
+   width: 100%;
+   height: 100vh;
+   background: rgba(0, 0, 0, 0.7);
+   z-index: 1;
+
+   &:hover {
+      & .number {
+         opacity: 1;
+      }
+
+      & .buttonWrap {
+         opacity: 1;
+      }
+
+      & .modalBtn {
+         opacity: 1;
+      }
+   }
+
+   &.show {
+      animation: fadeIn 0.5s ease-in-out;
+   }
+
+   &.hide {
+      animation: fadeOut 0.5s ease-in-out;
+   }
+}
+
+.playBar {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 3px;
+
+   & > div {
+      position: absolute;
+      left: 0;
+      height: 100%;
+      width: 0;
+      background: var(--primary);
+      transition: all 5s linear;
+   }
+
+   &.replay > div {
+      animation: longer 3.5s linear infinite;
+   }
+}
+
+.number {
+   position: absolute;
+   top: 0;
+   left: 0;
+   color: #ccc;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 44px;
+   height: 44px;
+
+   font-size: 14px;
+   font-family: 'Source Sans Pro', sans-serif;
+   letter-spacing: 2px;
+
+   opacity: 0;
+   transition: all 0.3s ease-in-out;
+}
+
+.buttonWrap {
+   position: absolute;
+   top: 0;
+   right: 0;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   opacity: 0;
+   transition: all 0.3s ease-in-out;
+
+   & > button {
+      width: 44px;
+      height: 44px;
+
+      font-size: 15px;
+      color: #ccc;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+         color: #fff;
+      }
+   }
+}
+
+.modalBtn {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+
+   width: 38px;
+   height: 38px;
+   margin: 31px 21px 31px 6px;
+   background: rgba(0, 0, 0, 0.5);
+   color: #ccc;
+   opacity: 0;
+   transition: all 0.3s ease-in-out;
+
+   &:hover {
+      color: #fff;
+   }
+
+   &.nextBtn {
+      left: 0;
+   }
+
+   &.prevBtn {
+      right: 0;
+   }
+}
+
+.imageModalBody {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   margin: 0 auto;
+   max-width: 856px;
+   width: 100%;
+   height: 100%;
+
+   &.zoomIn {
+      max-width: 100%;
+
+      & > img {
+         cursor: zoom-out;
+      }
+   }
+
+   & > img {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      cursor: zoom-in;
+   }
+}
+
+@keyframes fadeIn {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
+}
+
+@keyframes fadeOut {
+   from {
+      opacity: 1;
+   }
+   to {
+      opacity: 0;
+   }
+}
+
+@keyframes longer {
+   from {
+      width: 0;
+   }
+   to {
+      width: 100%;
    }
 }
