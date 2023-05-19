@@ -8,6 +8,7 @@ import VideoBackground from '../../components/VideoBackground'
 import styles from './style.module.scss'
 import RecentWork from '../../components/RecentWork'
 import OurClients from '../../components/OurClients'
+import Industry from '../../components/Industry'
 
 function HomePage() {
    return (
@@ -18,6 +19,7 @@ function HomePage() {
          <Quote />
          <StartWorkingWithUs />
          <AgencyServices />
+         <Industry />
          <VideoBackground />
          <OurClients />
       </div>

@@ -12,7 +12,6 @@ function PageHeader() {
       let timout1
       let timout2
       const interval = setInterval(() => {
-         console.log(123)
          transHeadingRef.current.style.setProperty('--slide', slides[curSlide])
          curSlide = curSlide === slides.length - 1 ? 0 : curSlide + 1
 

@@ -17,6 +17,11 @@ import brand8 from '../assets/imgs/brand8.jpg'
 import brand9 from '../assets/imgs/brand9.jpg'
 import brand10 from '../assets/imgs/brand10.jpg'
 
+import image3 from '../assets/imgs/image3.jpg'
+import image4 from '../assets/imgs/image4.jpg'
+import image5 from '../assets/imgs/image5.jpg'
+import image6 from '../assets/imgs/image6.jpg'
+
 // slides
 export const oriSlides = [
    {
@@ -80,3 +85,6 @@ export const clientBrands = [
    brand9,
    brand10,
 ]
+
+// industry
+export const imageLinkItems = [image3, image4, image5, image6]
