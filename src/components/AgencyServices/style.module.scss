@@ -81,6 +81,10 @@
    padding: 0 21px;
    margin-bottom: 42px;
 
+   &:nth-child(even) {
+      margin-top: -6%;
+   }
+
    // pc
    @media (min-width: 1201px) {
       &:nth-child(even) {

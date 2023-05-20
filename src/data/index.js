@@ -22,6 +22,10 @@ import image4 from '../assets/imgs/image4.jpg'
 import image5 from '../assets/imgs/image5.jpg'
 import image6 from '../assets/imgs/image6.jpg'
 
+import subSlideBackground1 from '../assets/imgs/subSlideBackground1.jpg'
+import subSlideBackground2 from '../assets/imgs/subSlideBackground2.jpg'
+import subSlideBackground3 from '../assets/imgs/subSlideBackground3.jpg'
+
 // slides
 export const oriSlides = [
    {
@@ -88,3 +92,22 @@ export const clientBrands = [
 
 // industry
 export const imageLinkItems = [image3, image4, image5, image6]
+
+// subslides
+export const subSlides = [
+   {
+      categories: ['Lifestyle'],
+      title: 'Consequuntur magni sit dolores eos qui ratione duis voluptatem!',
+      background: subSlideBackground1,
+   },
+   {
+      categories: ['Lifestyle'],
+      title: 'Dolore magnam aliquam quaerat voluptatem nemo enim',
+      background: subSlideBackground2,
+   },
+   {
+      categories: ['Lifestyle'],
+      title: 'We are nominated to agency of year for the second time',
+      background: subSlideBackground3,
+   },
+]

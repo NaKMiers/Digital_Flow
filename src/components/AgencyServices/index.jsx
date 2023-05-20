@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React, { memo, useCallback, useEffect, useRef } from 'react'
 import styles from './style.module.scss'
 import service1 from '../../assets/imgs/service1.png'
 import service2 from '../../assets/imgs/service2.png'
@@ -10,9 +10,67 @@ import service7 from '../../assets/imgs/service7.png'
 import service8 from '../../assets/imgs/service8.png'
 
 function AgencyServices() {
+   const topRef = useRef(null)
+   const servicesWrapRef = useRef(null)
+
+   const handleScrollAnimation = useCallback(() => {
+      const topElements = [...topRef.current.children]
+      const servicesWrapElements = [...servicesWrapRef.current.children]
+
+      topElements.forEach(e => {
+         const top = e.getBoundingClientRect().top
+         const bottom = e.getBoundingClientRect().bottom
+
+         if (top < window.innerHeight && bottom > 0) {
+            e.classList.add('appear')
+            e.classList.add(styles.appeared)
+         }
+      })
+
+      let delay = 0.2
+      servicesWrapElements.forEach(e => {
+         const top = e.getBoundingClientRect().top
+         const bottom = e.getBoundingClientRect().bottom
+
+         if (top < window.innerHeight && bottom > 0) {
+            delay += 0.15
+            e.style.opacity = 0
+            e.style.animation = `zoomOut 0.6s ease-in-out ${delay}s forwards`
+            e.classList.add(styles.appeared)
+         }
+      })
+
+      // remove event when all are appeared
+      let countAppeared = 0
+      topElements.forEach(e => {
+         if (e.className.includes(styles.appeared)) {
+            countAppeared++
+         }
+      })
+      servicesWrapElements.forEach(e => {
+         if (e.className.includes(styles.appeared)) {
+            countAppeared++
+         }
+      })
+      if (countAppeared === topElements.length + servicesWrapElements.length) {
+         console.log('removed---AgencyServices')
+         window.removeEventListener('scroll', handleScrollAnimation)
+      }
+   }, [])
+
+   // appear on scroll
+   useEffect(() => {
+      handleScrollAnimation()
+      window.addEventListener('scroll', handleScrollAnimation)
+
+      return () => {
+         window.removeEventListener('scroll', handleScrollAnimation)
+      }
+   }, [handleScrollAnimation])
+
    return (
       <section className={styles.AgencyServices}>
-         <div className={styles.top}>
+         <div className={styles.top} ref={topRef}>
             <h6>SERVICES THEGEM AGENCY</h6>
 
             <div>
@@ -27,7 +85,7 @@ function AgencyServices() {
          </div>
 
          <div className={styles.bottom}>
-            <div className={styles.servicesWrap}>
+            <div className={styles.servicesWrap} ref={servicesWrapRef}>
                <a className={styles.serviceItem} href='/'>
                   <div className={styles.service}>
                      <div className={styles.image}>

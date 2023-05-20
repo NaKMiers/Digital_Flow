@@ -63,11 +63,9 @@ function ImageLinkModal({ index, setImageIndex }) {
 
    // auto play
    useEffect(() => {
-      console.log('autoPlay: ', autoPlay)
       let interval
 
       if (autoPlay) {
-         console.log('true')
          playBarRef.current.classList.add(styles.replay)
          interval = setInterval(() => {
             index === imageLinkItems.length - 1 ? setImageIndex(0) : setImageIndex(index + 1)

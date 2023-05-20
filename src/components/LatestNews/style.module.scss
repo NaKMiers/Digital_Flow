@@ -1,0 +1,114 @@
+.LatestNews {
+   padding: 100px 0;
+   background: url('../../assets/imgs/waveBackground.webp');
+}
+
+.container {
+   max-width: 1212px;
+   width: 100%;
+   padding: 35px 21px 0;
+   margin: 0 auto;
+   // background: #eee;
+}
+
+.title {
+   // background: #f44336;
+   font-size: 50px;
+   font-weight: 700;
+   letter-spacing: 0.05em;
+   line-height: 69px;
+   margin-bottom: 80px;
+
+   // tablet
+   @media (max-width: 1200px) {
+      font-size: 36px;
+      line-height: 53px;
+   }
+
+   // mobile
+   @media (max-width: 768px) {
+      font-size: 28px;
+      line-height: 42px;
+   }
+}
+
+.news {
+   display: flex;
+   flex-wrap: wrap;
+   margin: 30px -21px 0;
+
+   // tablet
+   @media (max-width: 1200px) {
+      margin: 50px -21px 0;
+   }
+}
+
+.newsItem {
+   width: calc(100% / 3);
+   // background: cornsilk;
+   padding: 80px 21px 30px;
+
+   // tablet
+   @media (max-width: 830px) {
+      width: 50%;
+   }
+
+   // mobile small
+   @media (max-width: 550px) {
+      width: 100%;
+      margin-top: 0;
+   }
+
+   & > p:nth-of-type(1) {
+      min-height: 37px;
+
+      font-size: 12px;
+      font-family: 'Source Sans Pro', sans-serif;
+      line-height: 1.6em;
+      color: #ababab;
+      // background: blueviolet;
+   }
+
+   & > .link {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.6em;
+      letter-spacing: 0.05em;
+      margin-bottom: 18px;
+      transition: all 0.3s ease-in-out;
+      // background: #fff;
+
+      &:hover {
+         color: var(--primary);
+      }
+   }
+
+   & > p:nth-of-type(2) {
+      font-size: 16px;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 400;
+      line-height: 1.56em;
+      color: #ababab;
+
+      margin-bottom: 24px;
+
+      // background: blueviolet;
+   }
+
+   & > div {
+      // background: blueviolet;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 27px;
+
+      font-size: 13px;
+      font-family: 'Source Sans Pro', sans-serif;
+      color: #ababab;
+
+      & > div:nth-of-type(1) > span {
+         margin-left: 6px;
+      }
+   }
+}

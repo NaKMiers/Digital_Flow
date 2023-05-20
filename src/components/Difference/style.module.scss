@@ -153,6 +153,7 @@
       & > .icon {
          width: 127px;
          padding-left: 32px;
+         transform-origin: center;
 
          & > img {
             height: 100%;

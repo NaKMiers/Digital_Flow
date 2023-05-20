@@ -9,11 +9,16 @@ import ImageLinkModal from './ImageLinkModal'
 import styles from './style.module.scss'
 
 function Industry() {
+   const isCounting = useRef(false)
+
    const [slide, setSlide] = useState(1)
    const [sliding, setSliding] = useState(false)
+   const [imageIndex, setImageIndex] = useState(NaN)
    const slideTrackRef = useRef(null)
 
-   const [imageIndex, setImageIndex] = useState(NaN)
+   const progressItemRef = useRef(null)
+   const imageLinkItemRef = useRef(null)
+   const progressWrapRef = useRef(null)
 
    useEffect(() => {
       slideTrackRef.current.style.marginLeft = `calc(-100% * ${slide})`
@@ -96,6 +101,98 @@ function Industry() {
       }
    }, [nextSlide])
 
+   const handleScrollAnimation = useCallback(() => {
+      const progressItemElements = [...progressItemRef.current.children]
+      const imageLinkItemElements = [...imageLinkItemRef.current.children]
+
+      // 1
+      progressItemElements.forEach(e => {
+         const top = e.getBoundingClientRect().top
+         const bottom = e.getBoundingClientRect().bottom
+
+         if (top < window.innerHeight && bottom > 0) {
+            e.classList.add('appear')
+            e.classList.add(styles.appeared)
+         }
+      })
+
+      // 2
+      const top = progressWrapRef.current.getBoundingClientRect().top
+      const bottom = progressWrapRef.current.getBoundingClientRect().bottom
+
+      if (top < window.innerHeight && bottom > 0) {
+         const progressElements = [...progressWrapRef.current.children]
+         progressWrapRef.current.classList.add(styles.appear)
+
+         if (!isCounting.current) {
+            isCounting.current = true
+
+            progressElements.forEach(e => {
+               const label = e.children[0].children[1]
+               const bar = e.children[1].children[0]
+               const dataValue = parseInt(label.getAttribute('data-value'))
+
+               bar.style.width = dataValue + '%'
+
+               let startValue = 0
+               let endValue = dataValue
+               let interval = setInterval(() => {
+                  startValue += 1
+                  label.textContent = startValue + '%'
+                  if (startValue === endValue) {
+                     clearInterval(interval)
+                  }
+               }, 15)
+            })
+         }
+      }
+
+      // 3
+      let delay = 0.2
+      imageLinkItemElements.forEach(e => {
+         const top = e.getBoundingClientRect().top
+         const bottom = e.getBoundingClientRect().bottom
+
+         if (top < window.innerHeight && bottom > 0) {
+            delay += 0.2
+            e.style.opacity = 0
+            e.style.animation = `appear 0.8s ease-in-out ${delay}s forwards`
+            e.classList.add(styles.appeared)
+         }
+      })
+
+      // remove event when all are appeared
+      let countAppeared = 0
+      progressItemElements.forEach(e => {
+         if (e.className.includes(styles.appeared)) {
+            countAppeared++
+         }
+      })
+      imageLinkItemElements.forEach(e => {
+         if (e.className.includes(styles.appeared)) {
+            countAppeared++
+         }
+      })
+      if (progressWrapRef.current.className.includes(styles.appeared)) {
+         countAppeared++
+      }
+      console.log(countAppeared)
+      if (countAppeared === progressItemElements.length + 1 + imageLinkItemElements.length) {
+         console.log('removed---Difference')
+         window.removeEventListener('scroll', handleScrollAnimation)
+      }
+   }, [])
+
+   // appear on scroll
+   useEffect(() => {
+      handleScrollAnimation()
+      window.addEventListener('scroll', handleScrollAnimation)
+
+      return () => {
+         window.removeEventListener('scroll', handleScrollAnimation)
+      }
+   }, [handleScrollAnimation])
+
    return (
       <section className={styles.Industry}>
          <div className={styles.container}>
@@ -103,39 +200,39 @@ function Industry() {
                <img src={image1} alt='img' />
             </div>
 
-            <div className={styles.progressItem}>
+            <div className={styles.progressItem} ref={progressItemRef}>
                <p className={styles.text}>
                   Lorem Ipsum proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
                   quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis
                   sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
                </p>
 
-               <div className={styles.progressWrap}>
+               <div className={styles.progressWrap} ref={progressWrapRef}>
                   <div className={styles.progress}>
                      <div className={styles.progressLabel}>
                         <span>Programming</span>
-                        <span>73%</span>
+                        <span data-value='73'>0</span>
                      </div>
                      <div className={styles.progressBar}>
-                        <div style={{ width: '73%' }} />
+                        <div />
                      </div>
                   </div>
                   <div className={styles.progress}>
                      <div className={styles.progressLabel}>
                         <span>Marketing</span>
-                        <span>48%</span>
+                        <span data-value='48'>0</span>
                      </div>
                      <div className={styles.progressBar}>
-                        <div style={{ width: '48%' }} />
+                        <div />
                      </div>
                   </div>
                   <div className={styles.progress}>
                      <div className={styles.progressLabel}>
                         <span>Design</span>
-                        <span>65%</span>
+                        <span data-value='65'>0</span>
                      </div>
                      <div className={styles.progressBar}>
-                        <div style={{ width: '65%' }} />
+                        <div />
                      </div>
                   </div>
                </div>
@@ -209,55 +306,13 @@ function Industry() {
                <img src={image2} alt='img' />
             </div>
 
-            <div className={styles.imageLinkItem}>
+            <div className={styles.imageLinkItem} ref={imageLinkItemRef}>
                {imageLinkItems.map((link, index) => (
                   <ImageLinkItem data={link} key={index} index={index} openImageModal={setImageIndex} />
                ))}
-
-               {/* <div className={styles.imageModal} ref={imageModalRef}>
-                  <div className={styles.number}>
-                     {imageIndex + 1}/{imageLinkItems.length}
-                  </div>
-                  <div className={styles.buttonWrap}>
-                     <button>
-                        <FontAwesomeIcon icon={faSearch} />
-                     </button>
-                     <button>
-                        <FontAwesomeIcon icon={faPlay} />
-                     </button>
-                     <button>
-                        <FontAwesomeIcon icon={faX} onClick={handleCloseImageModal} />
-                     </button>
-                  </div>
-
-                  <button
-                     className={`${styles.modalBtn} ${styles.nextBtn}`}
-                     onClick={() =>
-                        imageIndex === 0
-                           ? setImageIndex(imageLinkItems.length - 1)
-                           : setImageIndex(imageIndex - 1)
-                     }
-                  >
-                     <FontAwesomeIcon icon={faArrowLeft} />
-                  </button>
-                  <button
-                     className={`${styles.modalBtn} ${styles.prevBtn}`}
-                     onClick={() =>
-                        imageIndex === imageLinkItems.length - 1
-                           ? setImageIndex(0)
-                           : setImageIndex(imageIndex + 1)
-                     }
-                  >
-                     <FontAwesomeIcon icon={faArrowRight} />
-                  </button>
-
-                  <div className={styles.imageModalBody} ref={imageModalBodyref}>
-                     <img src={imageLinkItems[imageIndex]} alt='img' onClick={handleZomeIn} />
-                  </div>
-               </div> */}
-
-               <ImageLinkModal index={imageIndex} setImageIndex={setImageIndex} />
             </div>
+
+            <ImageLinkModal index={imageIndex} setImageIndex={setImageIndex} />
          </div>
       </section>
    )

@@ -39,3 +39,55 @@ ul {
 /* ::-webkit-scrollbar {
    display: none;
 } */
+
+/* show on scroll */
+.appear {
+   opacity: 0;
+   animation: appear 0.8s ease-in-out 0.2s forwards;
+}
+
+@keyframes appear {
+   from {
+      opacity: 0;
+      transform: translateY(30px);
+   }
+
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+.flyLeft {
+   opacity: 0;
+   animation: flyLeft 0.8s ease-in-out 0.2s forwards;
+}
+
+@keyframes flyLeft {
+   from {
+      opacity: 0;
+      transform: translateX(25vw);
+   }
+
+   to {
+      opacity: 1;
+      transform: translateX(0);
+   }
+}
+
+.zoomOut {
+   opacity: 0;
+   animation: zoomOut 0.6s ease-in-out 0.2s forwards;
+}
+
+@keyframes zoomOut {
+   from {
+      opacity: 0;
+      transform: scale(0);
+   }
+
+   to {
+      opacity: 1;
+      transform: scale(1);
+   }
+}

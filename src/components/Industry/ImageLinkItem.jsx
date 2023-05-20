@@ -26,10 +26,7 @@ function ImageLinkItem({ index, data, openImageModal }) {
          to='/'
          onMouseOver={handleMouseOver}
          onMouseLeave={handleMouseLeave}
-         onClick={() => {
-            console.log(1323132)
-            openImageModal(index)
-         }}
+         onClick={() => openImageModal(index)}
       >
          <img src={data} alt='img' />
          <div className={styles.overlay} ref={overlayRef}>

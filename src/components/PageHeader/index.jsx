@@ -1,10 +1,12 @@
-import React, { memo, useEffect, useRef } from 'react'
+import React, { memo, useCallback, useEffect, useRef } from 'react'
 import styles from './style.module.scss'
 
 function PageHeader() {
    const transHeadingRef = useRef(null)
    const shutterRef = useRef(null)
+   const descRef = useRef(null)
 
+   // heading transition
    useEffect(() => {
       const slides = ['0%', '-100%', '-200%', '-300%']
       let curSlide = 0
@@ -35,6 +37,26 @@ function PageHeader() {
       }
    }, [])
 
+   const handleScrollAnimation = useCallback(() => {
+      const top = descRef.current.getBoundingClientRect().top
+      const bottom = descRef.current.getBoundingClientRect().bottom
+
+      if (top < window.innerHeight && bottom > 0) {
+         descRef.current.classList.add(styles.split)
+         console.log('removed---PageHeader')
+         window.removeEventListener('scroll', handleScrollAnimation)
+      }
+   }, [])
+
+   // appear on scroll
+   useEffect(() => {
+      handleScrollAnimation() // active after first load
+      window.addEventListener('scroll', handleScrollAnimation)
+      return () => {
+         window.removeEventListener('scroll', handleScrollAnimation)
+      }
+   }, [handleScrollAnimation])
+
    return (
       <section className={styles.PageHeader}>
          <div className={styles.top}>
@@ -56,7 +78,7 @@ function PageHeader() {
          </div>
          <div className={styles.bottom}>
             <div />
-            <div>
+            <div className={styles.desc} ref={descRef}>
                <span>
                   <span>Lorem</span>
                </span>{' '}

@@ -1,8 +1,9 @@
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { memo, useCallback, useEffect, useRef, useState } from 'react'
+import React, { Fragment, memo, useCallback, useEffect, useRef, useState } from 'react'
 import { maxSlideIndex, slideLength, slides, oriSlides } from '../../data'
 import styles from './style.module.scss'
+import { Link } from 'react-router-dom'
 
 function Slider() {
    const [slide, setSlide] = useState(1)
@@ -71,7 +72,11 @@ function Slider() {
          </button>
          <div className={styles.slidePagination}>
             {oriSlides.map((_, index) => (
-               <button key={index} onClick={() => setSlide(index + 1)} />
+               <button
+                  key={index}
+                  className={index + 1 === slide ? styles.active : ''}
+                  onClick={() => setSlide(index + 1)}
+               />
             ))}
          </div>
 
@@ -84,7 +89,12 @@ function Slider() {
                >
                   <div className={styles.slideBody}>
                      <div className={styles.categories}>
-                        <a href='/'>Design</a>, <a href='/'>Interface</a>
+                        {slide.categories.map((category, index) => (
+                           <Fragment key={index}>
+                              <Link to={`/categories/${category.toLowerCase()}`}>{category}</Link>
+                              {index !== slide.categories.length - 1 && ', '}
+                           </Fragment>
+                        ))}
                      </div>
 
                      <h1>{slide.title}</h1>
