@@ -36,6 +36,6 @@ ul {
    list-style: none;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
    display: none;
-}
+} */
