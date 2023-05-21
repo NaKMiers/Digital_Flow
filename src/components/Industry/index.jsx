@@ -176,7 +176,6 @@ function Industry() {
       if (progressWrapRef.current.className.includes(styles.appeared)) {
          countAppeared++
       }
-      console.log(countAppeared)
       if (countAppeared === progressItemElements.length + 1 + imageLinkItemElements.length) {
          console.log('removed---Difference')
          window.removeEventListener('scroll', handleScrollAnimation)

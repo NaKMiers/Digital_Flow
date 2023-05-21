@@ -6,6 +6,7 @@ import PageHeaderLite from '../../components/PageHeaderLite'
 import VideoBackground from '../../components/VideoBackground'
 import WorkWithProTeam from '../../components/WorkWithProTeam'
 import TeamMembers from '../../components/TeamMembers'
+import WorkTogether from '../../components/WorkTogether'
 import AwardsAndPrizes from '../../components/AwardsAndPrizes'
 import styles from './style.module.scss'
 
@@ -20,6 +21,7 @@ function AgencyPage() {
          <OurProcess />
          <TeamMembers />
          <AwardsAndPrizes />
+         <WorkTogether />
       </div>
    )
 }

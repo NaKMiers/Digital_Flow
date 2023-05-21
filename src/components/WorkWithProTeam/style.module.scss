@@ -3,15 +3,18 @@
    overflow: hidden;
 
    background: #000;
-   padding: 142px 25px 166px 25px;
+   padding: 142px 0 166px;
 
    // tablet
    @media (max-width: 1200px) {
-      padding: 136px 0px 170px 0px;
+      padding: 136px 0px 170px;
    }
 }
 
-.sectionBody {
+.container {
+   max-width: 1212px;
+   width: 100%;
+   margin: 0 auto;
    position: relative;
    z-index: 1;
 
@@ -58,6 +61,7 @@
 
       font-size: 19px;
       font-weight: 700;
+      opacity: 0;
       transition: all 0.3s ease-in-out;
 
       &:hover {

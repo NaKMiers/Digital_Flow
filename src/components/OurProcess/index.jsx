@@ -129,11 +129,11 @@ function OurProcess() {
                   </div>
                </div>
             </div>
-
-            <span className={styles.textBackground} ref={textBgRef}>
-               steps
-            </span>
          </div>
+
+         <span className={styles.textBackground} ref={textBgRef}>
+            steps
+         </span>
       </section>
    )
 }

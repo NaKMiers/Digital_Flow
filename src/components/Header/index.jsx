@@ -166,32 +166,56 @@ function Header({ fixed }) {
             </div>
             <ul className={styles.menuBody} ref={menuBody}>
                <li>
-                  <NavLink className={({ isActive }) => (isActive ? styles.active : '')} to='/'>
+                  <NavLink
+                     className={({ isActive }) => (isActive ? styles.active : '')}
+                     to='/'
+                     onClick={handleHideMenu}
+                  >
                      Home
                   </NavLink>
                </li>
                <li>
-                  <NavLink className={({ isActive }) => (isActive ? styles.active : '')} to='/agency'>
+                  <NavLink
+                     className={({ isActive }) => (isActive ? styles.active : '')}
+                     to='/agency'
+                     onClick={handleHideMenu}
+                  >
                      Agency
                   </NavLink>
                </li>
                <li>
-                  <NavLink className={({ isActive }) => (isActive ? styles.active : '')} to='/services'>
+                  <NavLink
+                     className={({ isActive }) => (isActive ? styles.active : '')}
+                     to='/services'
+                     onClick={handleHideMenu}
+                  >
                      Services
                   </NavLink>
                </li>
                <li>
-                  <NavLink className={({ isActive }) => (isActive ? styles.active : '')} to='/cases'>
+                  <NavLink
+                     className={({ isActive }) => (isActive ? styles.active : '')}
+                     to='/cases'
+                     onClick={handleHideMenu}
+                  >
                      Cases
                   </NavLink>
                </li>
                <li>
-                  <NavLink className={({ isActive }) => (isActive ? styles.active : '')} to='/blog'>
+                  <NavLink
+                     className={({ isActive }) => (isActive ? styles.active : '')}
+                     to='/blog'
+                     onClick={handleHideMenu}
+                  >
                      Blog
                   </NavLink>
                </li>
                <li>
-                  <NavLink className={({ isActive }) => (isActive ? styles.active : '')} to='/Contact'>
+                  <NavLink
+                     className={({ isActive }) => (isActive ? styles.active : '')}
+                     to='/Contact'
+                     onClick={handleHideMenu}
+                  >
                      Contact
                   </NavLink>
                </li>

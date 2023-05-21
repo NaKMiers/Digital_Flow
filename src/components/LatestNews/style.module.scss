@@ -7,8 +7,8 @@
 .container {
    max-width: 1212px;
    width: 100%;
-   padding: 35px 21px 0;
    margin: 0 auto;
+   padding: 35px 21px 0;
    // background: #eee;
 }
 
@@ -108,8 +108,12 @@
       font-family: 'Source Sans Pro', sans-serif;
       color: #ababab;
 
-      & > div:nth-of-type(1) > span {
-         margin-left: 6px;
+      & > div {
+         cursor: pointer;
+
+         &:nth-of-type(1) > span {
+            margin-left: 6px;
+         }
       }
    }
 }

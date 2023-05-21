@@ -59,8 +59,8 @@
 .content {
    width: 75%;
    padding-left: 50px;
+   margin-top: -8px;
    // background: cyan;
-
    // tabletew
    @media (max-width: 1200px) {
       padding: 0 21px;
@@ -72,6 +72,7 @@
    }
 
    & > p {
+      max-width: 1000px;
       font-size: 24px;
       font-weight: 300;
       font-family: 'Source Sans Pro', sans-serif;

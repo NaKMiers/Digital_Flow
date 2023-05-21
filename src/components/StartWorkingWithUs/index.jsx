@@ -2,11 +2,11 @@ import React, { memo, useCallback, useEffect, useRef } from 'react'
 import styles from './style.module.scss'
 
 function StartWorkingWithUs() {
-   const sectionBodyRef = useRef(null)
+   const containerRef = useRef(null)
    const textBgRef = useRef(null)
 
    const handleScrollAnimation = useCallback(() => {
-      const elements = [...sectionBodyRef.current.children, textBgRef.current]
+      const elements = [...containerRef.current.children, textBgRef.current]
 
       elements.forEach(e => {
          const top = e.getBoundingClientRect().top
@@ -43,7 +43,7 @@ function StartWorkingWithUs() {
 
    return (
       <section className={styles.StartWorkingWithUs}>
-         <div className={styles.sectionBody} ref={sectionBodyRef}>
+         <div className={styles.container} ref={containerRef}>
             <h6>START WORKING WITH US</h6>
 
             <h1>Experience design and intelligent marketing for growing brands</h1>

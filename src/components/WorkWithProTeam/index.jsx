@@ -2,10 +2,10 @@ import React, { memo, useCallback, useEffect, useRef } from 'react'
 import styles from './style.module.scss'
 
 function WorkWithProTeam() {
-   const sectionBodyRef = useRef(null)
+   const containerRef = useRef(null)
 
    const handleScrollAnimation = useCallback(() => {
-      const elements = [...sectionBodyRef.current.children]
+      const elements = [...containerRef.current.children]
 
       elements.forEach(e => {
          const top = e.getBoundingClientRect().top
@@ -41,7 +41,7 @@ function WorkWithProTeam() {
 
    return (
       <section className={styles.WorkWithProTeam}>
-         <div className={styles.sectionBody} ref={sectionBodyRef}>
+         <div className={styles.container} ref={containerRef}>
             <h6>WORK WITH PRO TEAM</h6>
 
             <h1>Would you like to have professional project? Let’s talk about it!</h1>

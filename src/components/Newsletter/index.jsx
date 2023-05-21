@@ -4,9 +4,10 @@ import styles from './style.module.scss'
 function Newsletter() {
    const leftRef = useRef(null)
    const rightRef = useRef(null)
+   const textBgRef = useRef(null)
 
    const handleScrollAnimation = useCallback(() => {
-      const elements = [...leftRef.current.children, ...rightRef.current.children]
+      const elements = [...leftRef.current.children, ...rightRef.current.children, textBgRef.current]
 
       elements.forEach(e => {
          const top = e.getBoundingClientRect().top
@@ -59,7 +60,9 @@ function Newsletter() {
             </form>
          </div>
 
-         <div className={styles.textBackground}>subscribe</div>
+         <div className={styles.textBackground} ref={textBgRef}>
+            subscribe
+         </div>
       </section>
    )
 }
