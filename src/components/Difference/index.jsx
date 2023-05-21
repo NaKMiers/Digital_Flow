@@ -20,28 +20,6 @@ function Difference() {
    const quickFinderIconRef3 = useRef(null)
    const quickFinderIconRef4 = useRef(null)
 
-   const handleCountingAnimation = useCallback(() => {
-      const paramTop = parametersRef.current.getBoundingClientRect().top
-      const paramBottom = parametersRef.current.getBoundingClientRect().bottom
-
-      if (paramTop < window.innerHeight && paramBottom > 0) {
-         const parameters = [paramRef1, paramRef2, paramRef3]
-         parameters.forEach(param => {
-            let startValue = 0
-            let endValue = parseInt(param.current.getAttribute('data-value'))
-
-            let counter = setInterval(() => {
-               startValue += 1
-               param.current.textContent = startValue
-
-               if (startValue === endValue) {
-                  clearInterval(counter)
-               }
-            }, 0)
-         })
-      }
-   }, [])
-
    const handleScrollAnimation = useCallback(() => {
       const topElements = [parametersRef.current, ...contentRef.current.children]
       const quickFinderElements = [
@@ -51,6 +29,7 @@ function Difference() {
          quickFinderIconRef4.current,
       ]
 
+      // 1
       topElements.forEach(e => {
          const top = e.getBoundingClientRect().top
          const bottom = e.getBoundingClientRect().bottom
@@ -61,6 +40,33 @@ function Difference() {
          }
       })
 
+      // 2
+      const top = parametersRef.current.getBoundingClientRect().top
+      const bottom = parametersRef.current.getBoundingClientRect().bottom
+
+      if (top < window.innerHeight && bottom > 0) {
+         if (!isCounting.current) {
+            isCounting.current = true
+            parametersRef.current.classList.add(styles.appeared)
+
+            const parameters = [paramRef1, paramRef2, paramRef3]
+            parameters.forEach(param => {
+               let startValue = 0
+               let endValue = parseInt(param.current.getAttribute('data-value'))
+
+               let counter = setInterval(() => {
+                  startValue += 1
+                  param.current.textContent = startValue
+
+                  if (startValue === endValue) {
+                     clearInterval(counter)
+                  }
+               }, 0)
+            })
+         }
+      }
+
+      // 3
       let delay = 0.2
       quickFinderElements.forEach(e => {
          const top = e.getBoundingClientRect().top
@@ -74,12 +80,6 @@ function Difference() {
          }
       })
 
-      // handle counting
-      if (!isCounting.current) {
-         isCounting.current = true
-         handleCountingAnimation()
-      }
-
       // remove event when all are appeared
       let countAppeared = 0
       topElements.forEach(e => {
@@ -92,11 +92,14 @@ function Difference() {
             countAppeared++
          }
       })
-      if (countAppeared === topElements.length + quickFinderElements.length) {
+      if (parametersRef.current.className.includes(styles.appeared)) {
+         countAppeared++
+      }
+      if (countAppeared === topElements.length + 1 + quickFinderElements.length) {
          console.log('removed---Difference')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
-   }, [isCounting, handleCountingAnimation])
+   }, [isCounting])
 
    // appear on scroll
    useEffect(() => {

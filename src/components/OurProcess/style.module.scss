@@ -1,0 +1,134 @@
+.OurProcess {
+   overflow: hidden;
+}
+
+.container {
+   position: relative;
+
+   max-width: 1212px;
+   width: 100%;
+   padding-top: 100px;
+   margin: 0 auto;
+   // background: bisque;
+}
+
+.top {
+   padding: 35px 21px 0;
+   text-align: center;
+   // background: azure;
+
+   & > h6 {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      line-height: 25px;
+      color: var(--primary);
+      margin-bottom: 1.1rem;
+      // background: blueviolet;
+   }
+
+   & > h1 {
+      font-size: 80px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      line-height: 90px;
+      margin-bottom: 1.1rem;
+      // background: yellow;
+
+      // tablet
+      @media (max-width: 1200px) {
+         font-size: 50px;
+         line-height: 69px;
+      }
+
+      // mobile
+      @media (max-width: 768px) {
+         font-size: 36px;
+         line-height: 53px;
+      }
+   }
+}
+
+.quickFinderWrap {
+   display: flex;
+   flex-wrap: wrap;
+   padding: 60px 0;
+
+   // background: teal;
+}
+
+.quickFinderItem {
+   display: block;
+   width: 25%;
+   padding: 50px 25px;
+   margin-bottom: 42px;
+   // background-color: aquamarine;
+
+   // tablet
+   @media (max-width: 980px) {
+      width: 50%;
+   }
+
+   // mobile small
+   @media (max-width: 548px) {
+      width: 100%;
+   }
+
+   &:hover {
+      & > .body {
+         & > p:nth-of-type(1) {
+            color: var(--primary);
+         }
+
+         & > p:nth-of-type(2) {
+            color: #000;
+         }
+      }
+   }
+
+   & > .icon {
+      display: flex;
+      justify-content: center;
+      height: 48px;
+      margin-bottom: 25px;
+      // background-color: cyan;
+
+      & > img {
+         height: 100%;
+      }
+   }
+}
+
+.body {
+   text-align: center;
+
+   & > p:nth-of-type(1) {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.4em;
+      margin-bottom: 14px;
+      transition: 0.3s ease-in-out;
+      // background-color: #ccc;
+   }
+
+   & > p:nth-of-type(2) {
+      font-size: 14px;
+      line-height: 25px;
+      color: #ababab;
+      transition: 0.3s ease-in-out;
+      // background-color: #000;
+   }
+}
+
+.textBackground {
+   position: absolute;
+   bottom: -38px;
+   left: 0;
+   z-index: -1;
+
+   color: #f7f7f7;
+   font-size: 500px;
+   font-weight: 700;
+   text-align: right;
+   letter-spacing: 25px;
+}

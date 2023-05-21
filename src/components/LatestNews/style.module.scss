@@ -1,6 +1,7 @@
 .LatestNews {
    padding: 100px 0;
    background: url('../../assets/imgs/waveBackground.webp');
+   overflow: hidden;
 }
 
 .container {
@@ -54,7 +55,7 @@
    }
 
    // mobile small
-   @media (max-width: 550px) {
+   @media (max-width: 548px) {
       width: 100%;
       margin-top: 0;
    }

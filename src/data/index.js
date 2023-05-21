@@ -26,6 +26,15 @@ import subSlideBackground1 from '../assets/imgs/subSlideBackground1.jpg'
 import subSlideBackground2 from '../assets/imgs/subSlideBackground2.jpg'
 import subSlideBackground3 from '../assets/imgs/subSlideBackground3.jpg'
 
+import member1 from '../assets/imgs/member1.jpg'
+import member2 from '../assets/imgs/member2.jpg'
+import member3 from '../assets/imgs/member3.jpg'
+import member4 from '../assets/imgs/member4.jpg'
+import member5 from '../assets/imgs/member5.jpg'
+import member6 from '../assets/imgs/member6.jpg'
+import member7 from '../assets/imgs/member7.jpg'
+import member8 from '../assets/imgs/member8.jpg'
+
 // slides
 export const oriSlides = [
    {
@@ -109,5 +118,65 @@ export const subSlides = [
       categories: ['Lifestyle'],
       title: 'We are nominated to agency of year for the second time',
       background: subSlideBackground3,
+   },
+]
+
+// team members
+export const teamMembers = [
+   {
+      name: 'Herman Ledford',
+      detail:
+         'Lorem ipsum dolor sit ametcon sectetur adipisicing elit, sed doiusmod temporincidi labore et dolore.',
+      avatar: member1,
+      link: '/agency',
+   },
+   {
+      name: 'Mel Granville',
+      detail:
+         'Lorem ipsum dolor sit ametcon sectetur adipisicing elit, sed doiusmod temporincidi labore et dolore.',
+      avatar: member2,
+      link: '/agency',
+   },
+   {
+      name: 'Ava Robinson',
+      detail:
+         'Lorem ipsum dolor sit ametcon sectetur adipisicing elit, sed doiusmod temporincidi labore et dolore.',
+      avatar: member3,
+      link: '/agency',
+   },
+   {
+      name: 'Gordon Edwards',
+      detail:
+         'Lorem ipsum dolor sit ametcon sectetur adipisicing elit, sed doiusmod temporincidi labore et dolore.',
+      avatar: member4,
+      link: '/agency',
+   },
+   {
+      name: 'Cassandra Lynn',
+      detail:
+         'Lorem ipsum dolor sit ametcon sectetur adipisicing elit, sed doiusmod temporincidi labore et dolore.',
+      avatar: member5,
+      link: '/agency',
+   },
+   {
+      name: 'Karina Marie',
+      detail:
+         'Lorem ipsum dolor sit ametcon sectetur adipisicing elit, sed doiusmod temporincidi labore et dolore.',
+      avatar: member6,
+      link: '/agency',
+   },
+   {
+      name: 'Eva Lynn',
+      detail:
+         'Lorem ipsum dolor sit ametcon sectetur adipisicing elit, sed doiusmod temporincidi labore et dolore.',
+      avatar: member7,
+      link: '/agency',
+   },
+   {
+      name: 'Alex Robinson',
+      detail:
+         'Lorem ipsum dolor sit ametcon sectetur adipisicing elit, sed doiusmod temporincidi labore et dolore.',
+      avatar: member8,
+      link: '/agency',
    },
 ]

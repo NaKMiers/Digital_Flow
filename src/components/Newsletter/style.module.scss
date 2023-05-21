@@ -6,7 +6,7 @@
    justify-content: center;
    overflow: hidden;
 
-   padding: 144px 50px;
+   padding: 156px 50px 126px;
    background: var(--primary);
 
    // tablet large
@@ -33,13 +33,14 @@
    & > h6 {
       font-size: 1rem;
       margin-bottom: 1.1rem;
-      letter-spacing: 1px;
+      letter-spacing: 0.05em;
    }
 
    & > h1 {
       font-size: 5rem;
-      margin-bottom: 1.1rem;
+      margin-bottom: 0.8rem;
       letter-spacing: 0.25rem;
+      line-height: 1.23em;
 
       // tablet large
       @media (max-width: 1200px) {
@@ -57,6 +58,7 @@
       max-width: 463px;
       font-size: 1rem;
       font-family: 'Source Sans Pro', sans-serif;
+      line-height: 1.55em;
       margin-bottom: 1.1rem;
 
       // tablet
@@ -83,18 +85,20 @@
    & > .form {
       width: 100%;
       display: flex;
+      margin-bottom: 24px;
 
       // tablet
       @media (max-width: 768px) {
          flex-direction: column;
          width: 100%;
+         margin-bottom: 0;
       }
 
       & > input {
          flex: 1;
          height: 50px;
          padding: 0 25px;
-         margin: 0 30px 8px 0;
+         margin: 0 30px 0 0;
          background: #fff;
          font-size: 0.9rem;
 
@@ -127,7 +131,8 @@
 
 .textBackground {
    position: absolute;
-   bottom: -43%;
+   left: -700px;
+   bottom: -215px;
 
    color: #10e0a5;
    font-size: 500px;

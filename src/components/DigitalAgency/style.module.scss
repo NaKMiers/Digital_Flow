@@ -1,0 +1,104 @@
+.DigitalAgency {
+   padding: 90px 0;
+
+   overflow: hidden;
+}
+
+.top {
+   max-width: 1212px;
+   padding: 0 21px;
+   margin: 0 auto 60px;
+   // background: blueviolet;
+
+   & > h6 {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      line-height: 25px;
+      color: var(--primary);
+      margin-bottom: 1.1rem;
+      // background-color: #000;
+   }
+
+   & > h1 {
+      font-size: 80px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      // background-color: yellow;
+      line-height: 90px;
+
+      // tablet
+      @media (max-width: 1200px) {
+         font-size: 50px;
+         line-height: 69px;
+      }
+
+      // mobile
+      @media (max-width: 768px) {
+         font-size: 36px;
+         line-height: 53px;
+      }
+   }
+}
+
+.bottom {
+   width: 100%;
+   display: flex;
+   // background-color: bisque;
+}
+
+.hero {
+   width: 25%;
+   background: url(../../assets/imgs/plusBackground.webp) no-repeat;
+   // mobile
+   @media (max-width: 768px) {
+      display: none;
+   }
+}
+
+.content {
+   width: 75%;
+   padding-left: 50px;
+   // background: cyan;
+
+   // tabletew
+   @media (max-width: 1200px) {
+      padding: 0 21px;
+   }
+
+   // mobile
+   @media (max-width: 768px) {
+      width: 100%;
+   }
+
+   & > p {
+      font-size: 24px;
+      font-weight: 300;
+      font-family: 'Source Sans Pro', sans-serif;
+      line-height: 1.5em;
+      margin-bottom: 1.1rem;
+   }
+
+   & > .social {
+      display: flex;
+      height: 32px;
+      margin: 0 -12px;
+      // background-color: blueviolet;
+
+      & > a {
+         display: block;
+         height: 22px;
+         margin: 0 10px;
+         cursor: pointer;
+         transition: all 0.3s ease-in-out;
+
+         & > img {
+            height: 100%;
+         }
+
+         &:hover {
+            opacity: 0.7;
+         }
+      }
+   }
+}

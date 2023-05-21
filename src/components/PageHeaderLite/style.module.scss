@@ -1,0 +1,97 @@
+.PageHeaderLite {
+   overflow: hidden;
+}
+
+.top {
+   max-width: 1212px;
+   padding: 0 21px 100px;
+   margin: 0 auto;
+   // background-color: antiquewhite;
+
+   // tablet
+   @media (max-width: 980px) {
+      padding: 50px 21px 100px;
+   }
+
+   // tablet
+   @media (max-width: 768px) {
+      padding: 50px 21px 0;
+   }
+}
+
+.heading {
+   position: relative;
+   font-size: 200px;
+   font-weight: 800;
+   // background-color: bisque;
+   letter-spacing: 0.05em;
+   line-height: 1.2em;
+   z-index: 1;
+
+   // tablet
+   @media (max-width: 1200px) {
+      font-size: 80px;
+   }
+
+   // mobile
+   @media (max-width: 768px) {
+      font-size: 50px;
+   }
+}
+
+.bottom {
+   position: relative;
+
+   display: flex;
+   min-height: 222px;
+   padding: 18px 0;
+
+   & > div:nth-of-type(1) {
+      flex-grow: 1;
+      max-width: 42%;
+      background: url('../../assets/imgs/plusBackground.webp') no-repeat;
+      margin-right: 26px;
+      z-index: 1;
+
+      // mobile
+      @media (max-width: 768px) {
+         display: none;
+      }
+   }
+
+   & > .bottomBackground {
+      position: absolute;
+      top: -90%;
+      left: 100px;
+
+      // tablet
+      @media (max-width: 1200px) {
+         left: 70px;
+      }
+
+      color: #f7f7f7;
+      font-size: 500px;
+      font-weight: 700;
+      text-align: right;
+      letter-spacing: 25px;
+   }
+}
+
+.desc {
+   max-width: 520px;
+   width: 58%;
+   margin-top: -0.5em;
+   z-index: 1;
+
+   & > span {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.55em;
+   }
+
+   // mobile
+   @media (max-width: 768px) {
+      width: 100%;
+      margin-left: 21px;
+   }
+}

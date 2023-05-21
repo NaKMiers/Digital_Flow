@@ -1,17 +1,15 @@
 import React, { memo, useCallback, useEffect, useRef } from 'react'
 import styles from './style.module.scss'
 
-function Newsletter() {
-   const leftRef = useRef(null)
-   const rightRef = useRef(null)
+function WorkWithProTeam() {
+   const sectionBodyRef = useRef(null)
 
    const handleScrollAnimation = useCallback(() => {
-      const elements = [...leftRef.current.children, ...rightRef.current.children]
+      const elements = [...sectionBodyRef.current.children]
 
       elements.forEach(e => {
          const top = e.getBoundingClientRect().top
          const bottom = e.getBoundingClientRect().bottom
-
          if (top < window.innerHeight && bottom > 0) {
             e.classList.add('appear')
             e.classList.add(styles.appeared)
@@ -26,7 +24,7 @@ function Newsletter() {
          }
       })
       if (countAppeared === elements.length) {
-         console.log('removed---Newsletter')
+         console.log('removed---WorkWithProTeam')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [])
@@ -34,34 +32,24 @@ function Newsletter() {
    // appear on scroll
    useEffect(() => {
       handleScrollAnimation()
-      window.addEventListener('scroll', handleScrollAnimation)
 
+      window.addEventListener('scroll', handleScrollAnimation)
       return () => {
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [handleScrollAnimation])
 
    return (
-      <section className={styles.Newsletter}>
-         <div className={styles.left} ref={leftRef}>
-            <h6>SUBSCRIBE TO OUR FREE</h6>
-            <h1>Newsletter</h1>
-            <p>
-               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed usmod tempor incididunt ut
-               labore et dolore magna.
-            </p>
-         </div>
+      <section className={styles.WorkWithProTeam}>
+         <div className={styles.sectionBody} ref={sectionBodyRef}>
+            <h6>WORK WITH PRO TEAM</h6>
 
-         <div className={styles.right} ref={rightRef}>
-            <form className={styles.form}>
-               <input type='email' placeholder='Your email address' required />
-               <button>SUBSCRIBE</button>
-            </form>
-         </div>
+            <h1>Would you like to have professional project? Let’s talk about it!</h1>
 
-         <div className={styles.textBackground}>subscribe</div>
+            <button>Get started</button>
+         </div>
       </section>
    )
 }
 
-export default memo(Newsletter)
+export default memo(WorkWithProTeam)

@@ -1,0 +1,118 @@
+.TeamMembers {
+   padding-top: 100px;
+   background: var(--primary);
+   overflow: hidden;
+}
+
+.container {
+   max-width: 1212px;
+   margin: 0 auto;
+   // background: azure;
+}
+
+.top {
+   padding: 35px 21px 0;
+
+   & > h6 {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      line-height: 25px;
+      margin-bottom: 1.1rem;
+      // background: aquamarine;
+   }
+
+   & > h1 {
+      font-size: 80px;
+      font-weight: 700;
+
+      letter-spacing: 0.05em;
+      line-height: 90px;
+      margin-bottom: 1.1rem;
+      // background: aqua;
+
+      // tablet
+      @media (max-width: 1200px) {
+         font-size: 50px;
+         line-height: 69px;
+      }
+
+      // tablet
+      @media (max-width: 768px) {
+         font-size: 36px;
+         line-height: 53px;
+      }
+   }
+}
+
+.teamMembers {
+   display: flex;
+   flex-wrap: wrap;
+
+   padding: 60px 0;
+   // background-color: beige;
+}
+
+.teamMemberItem {
+   display: block;
+   width: 25%;
+   padding: 0 21px;
+   margin-bottom: 42px;
+   // background: azure;
+
+   &:hover > div {
+      background: #fff;
+
+      & > .avatar > img {
+         transform: scale(1.2);
+         filter: grayscale(0);
+      }
+   }
+
+   // tablet
+   @media (max-width: 980px) {
+      width: 50%;
+   }
+
+   // mobile small
+   @media (max-width: 548px) {
+      width: 100%;
+   }
+
+   & > div {
+      padding: 50px 25px;
+      transition: all 0.3s ease-in-out;
+
+      & > .avatar {
+         // background-color: blueviolet;
+         width: 50px;
+         height: 50px;
+         margin-bottom: 25px;
+         border-radius: 50%;
+         overflow: hidden;
+
+         & > img {
+            width: 100%;
+            height: 100%;
+            transition: all 0.3s ease-in-out;
+            filter: grayscale(1);
+         }
+      }
+
+      & > .content {
+         // background: blueviolet;
+         & > p:nth-of-type(1) {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 14px;
+         }
+
+         & > p:nth-of-type(2) {
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 2em;
+            margin-bottom: 14px;
+         }
+      }
+   }
+}

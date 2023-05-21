@@ -33,7 +33,7 @@ function Footer() {
          socialElements.forEach(e => {
             delay += 0.1
             e.style.opacity = 0
-            e.style.animation = `flyLeft 0.8s ease-in-out ${delay}s forwards`
+            e.style.animation = `flyLeft 0.4s ease-in-out ${delay}s forwards`
             countAppear++
          })
       }
