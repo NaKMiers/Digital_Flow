@@ -186,6 +186,7 @@
 .slide {
    flex-shrink: 0;
    text-align: center;
+   overflow: hidden;
 
    width: 100%;
    height: 100%;
@@ -214,6 +215,7 @@
       // mobile
       @media (max-width: 600px) {
          font-size: 4vw;
+         padding: 14px 13.3vw 0;
       }
    }
 

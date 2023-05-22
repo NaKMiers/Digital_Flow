@@ -3,6 +3,7 @@ import styles from './style.module.scss'
 import galery1 from '../../assets/imgs/galery1.jpg'
 import galery2 from '../../assets/imgs/galery2.jpg'
 import galery3 from '../../assets/imgs/galery3.jpg'
+import DigitalHeading from '../DigitalHeading'
 
 function DigitalGallery() {
    const textItemRef1 = useRef(null)
@@ -49,6 +50,17 @@ function DigitalGallery() {
 
    return (
       <section className={styles.DigitalGallery}>
+         <DigitalHeading
+            data={{
+               title: 'We deliver smart and flexible solutions',
+               smallTitle: true,
+               desc: [
+                  'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum sed ut perspiciatis unde omnis iste natus!',
+               ],
+            }}
+            style={{ padding: '120px 0 90px' }}
+         />
+
          <div className={styles.container}>
             <div className={`${styles.galeryItem} ${styles.textItem}`} ref={textItemRef1}>
                <h2>Great inspiration</h2>

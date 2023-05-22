@@ -35,6 +35,10 @@ import member6 from '../assets/imgs/member6.jpg'
 import member7 from '../assets/imgs/member7.jpg'
 import member8 from '../assets/imgs/member8.jpg'
 
+import clien1 from '../assets/imgs/client1.jpg'
+import clien2 from '../assets/imgs/client2.jpg'
+import clien3 from '../assets/imgs/client3.jpg'
+
 // slides
 export const oriSlides = [
    {
@@ -179,4 +183,33 @@ export const teamMembers = [
       avatar: member8,
       link: '/agency',
    },
+]
+
+// clients say about us
+export const oriTestimonials = [
+   {
+      name: 'JENIFFER BURNS',
+      company: 'Creative Heads Inc.',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+      avatar: clien1,
+   },
+
+   {
+      name: 'GORDON EDWARDS',
+      company: 'Creative Heads Inc.',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+      avatar: clien2,
+   },
+
+   {
+      name: 'ANH KHOA',
+      company: 'Creative Heads Inc.',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+      avatar: clien3,
+   },
+]
+export const testimonials = [
+   oriTestimonials[oriTestimonials.length - 1],
+   ...oriTestimonials,
+   oriTestimonials[0],
 ]

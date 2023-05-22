@@ -1,13 +1,13 @@
 import React from 'react'
-import DigitalAgency from '../../components/DigitalAgency'
+import AwardsAndPrizes from '../../components/AwardsAndPrizes'
+import DigitalHeading from '../../components/DigitalHeading'
 import History from '../../components/History'
 import OurProcess from '../../components/OurProcess'
 import PageHeaderLite from '../../components/PageHeaderLite'
-import VideoBackground from '../../components/VideoBackground'
-import WorkWithProTeam from '../../components/WorkWithProTeam'
 import TeamMembers from '../../components/TeamMembers'
+import VideoBackground from '../../components/VideoBackground'
 import WorkTogether from '../../components/WorkTogether'
-import AwardsAndPrizes from '../../components/AwardsAndPrizes'
+import WorkWithProTeam from '../../components/WorkWithProTeam'
 import styles from './style.module.scss'
 
 function AgencyPage() {
@@ -15,7 +15,7 @@ function AgencyPage() {
       <div className={styles.AgencyPage}>
          <PageHeaderLite title='Agency' />
          <VideoBackground />
-         <DigitalAgency
+         <DigitalHeading
             data={{
                title: 'About Agency',
                desc: [
@@ -30,15 +30,6 @@ function AgencyPage() {
          <OurProcess />
          <TeamMembers />
          <AwardsAndPrizes />
-         <DigitalAgency
-            data={{
-               title: 'Let’s work together',
-               desc: [
-                  'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum sed ut perspiciatis unde omnis iste natus!',
-               ],
-            }}
-            style={{ padding: '120px 0 90px' }}
-         />
          <WorkTogether />
       </div>
    )

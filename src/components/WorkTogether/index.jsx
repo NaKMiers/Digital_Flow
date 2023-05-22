@@ -2,12 +2,23 @@ import React, { useState } from 'react'
 import styles from './style.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
+import DigitalHeading from '../DigitalHeading'
 
 function WorkTogether() {
    const [panel, setPanel] = useState(1)
 
    return (
       <section className={styles.WorkTogether}>
+         <DigitalHeading
+            data={{
+               title: 'Let’s work together',
+               desc: [
+                  'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum sed ut perspiciatis unde omnis iste natus!',
+               ],
+            }}
+            style={{ padding: '120px 0 90px' }}
+         />
+
          <div className={styles.container}>
             <div className={styles.panelWrap}>
                <div className={`${styles.panelItem} ${panel === 1 ? styles.active : ''}`}>

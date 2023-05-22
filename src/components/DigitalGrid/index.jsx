@@ -91,6 +91,7 @@ function DigitalGrid() {
       }
    }, [slide, sliding])
 
+   // slides autoplay
    useEffect(() => {
       const interval = setInterval(() => {
          nextSlide()

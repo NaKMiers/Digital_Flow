@@ -6,7 +6,7 @@ import instagram from '../../assets/imgs/instagram.png'
 import pinterest from '../../assets/imgs/pinterest.png'
 import youtube from '../../assets/imgs/youtube.png'
 
-function DigitalAgency({ data, style }) {
+function DigitalHeading({ data, style }) {
    const topRef = useRef(null)
    const contentRef = useRef(null)
 
@@ -33,7 +33,7 @@ function DigitalAgency({ data, style }) {
       })
 
       if (countAppeared === elements.length) {
-         console.log('removed---DigitalAgency')
+         console.log('removed---DigitalHeading')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [])
@@ -50,7 +50,7 @@ function DigitalAgency({ data, style }) {
 
    console.log(data.smallTitle)
    return (
-      <section className={styles.DigitalAgency} style={{ ...style }}>
+      <section className={styles.DigitalHeading} style={{ ...style }}>
          <div className={styles.top} ref={topRef}>
             <h6>THEGEM DIGITAL AGENCY</h6>
             <h1 className={data.smallTitle ? styles.smallTitle : ''}>{data.title}</h1>
@@ -92,4 +92,4 @@ function DigitalAgency({ data, style }) {
    )
 }
 
-export default DigitalAgency
+export default DigitalHeading
