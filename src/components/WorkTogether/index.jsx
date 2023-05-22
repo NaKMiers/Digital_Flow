@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import styles from './style.module.scss'
-import DigitalAgency from '../DigitalAgency'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
@@ -9,8 +8,6 @@ function WorkTogether() {
 
    return (
       <section className={styles.WorkTogether}>
-         <DigitalAgency workTogether style={{ padding: '120px 0 90px' }} />
-
          <div className={styles.container}>
             <div className={styles.panelWrap}>
                <div className={`${styles.panelItem} ${panel === 1 ? styles.active : ''}`}>

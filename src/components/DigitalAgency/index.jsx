@@ -6,7 +6,7 @@ import instagram from '../../assets/imgs/instagram.png'
 import pinterest from '../../assets/imgs/pinterest.png'
 import youtube from '../../assets/imgs/youtube.png'
 
-function DigitalAgency({ workTogether, style }) {
+function DigitalAgency({ data, style }) {
    const topRef = useRef(null)
    const contentRef = useRef(null)
 
@@ -48,34 +48,26 @@ function DigitalAgency({ workTogether, style }) {
       }
    }, [handleScrollAnimation])
 
+   console.log(data.smallTitle)
    return (
       <section className={styles.DigitalAgency} style={{ ...style }}>
          <div className={styles.top} ref={topRef}>
             <h6>THEGEM DIGITAL AGENCY</h6>
-            <h1>{!workTogether ? 'About Agency' : 'Let’s work together'}</h1>
+            <h1 className={data.smallTitle ? styles.smallTitle : ''}>{data.title}</h1>
          </div>
 
          <div className={styles.bottom}>
             <div className={styles.hero} />
 
             <div className={styles.content} ref={contentRef}>
-               <p>
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum sed ut perspiciatis unde omnis iste natus!
-               </p>
-               {!workTogether && (
-                  <p>
-                     Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-                     ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                     Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-                     consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
-                     quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-                     sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam
-                     quaerat voluptatem.
-                  </p>
+               {data.desc && (
+                  <>
+                     {data.desc.map((datum, index) => (
+                        <p key={index}>{datum}</p>
+                     ))}
+                  </>
                )}
-
-               {!workTogether && (
+               {data.social && (
                   <div className={styles.social}>
                      <a href='/'>
                         <img src={facebook} alt='social' />

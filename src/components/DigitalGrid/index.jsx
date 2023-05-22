@@ -8,7 +8,7 @@ import ImageLinkItem from './ImageLinkItem'
 import ImageLinkModal from './ImageLinkModal'
 import styles from './style.module.scss'
 
-function Industry() {
+function DigitalGrid() {
    const isCounting = useRef(false)
 
    const [slide, setSlide] = useState(1)
@@ -177,7 +177,7 @@ function Industry() {
          countAppeared++
       }
       if (countAppeared === progressItemElements.length + 1 + imageLinkItemElements.length) {
-         console.log('removed---Difference')
+         console.log('removed---DigitalGrid')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [])
@@ -193,7 +193,7 @@ function Industry() {
    }, [handleScrollAnimation])
 
    return (
-      <section className={styles.Industry}>
+      <section className={styles.DigitalGrid}>
          <div className={styles.container}>
             <div className={styles.imageItem}>
                <img src={image1} alt='img' />
@@ -317,4 +317,4 @@ function Industry() {
    )
 }
 
-export default memo(Industry)
+export default memo(DigitalGrid)

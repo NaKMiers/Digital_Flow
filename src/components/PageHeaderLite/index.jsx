@@ -1,11 +1,11 @@
 import React, { memo } from 'react'
 import styles from './style.module.scss'
 
-function PageHeaderLite() {
+function PageHeaderLite({ title }) {
    return (
       <section className={styles.PageHeaderLite}>
          <div className={styles.top}>
-            <h1 className={styles.heading}>Agency</h1>
+            <h1 className={styles.heading}>{title}</h1>
          </div>
 
          <div className={styles.bottom}>

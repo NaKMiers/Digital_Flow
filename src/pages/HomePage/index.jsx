@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 import AgencyServices from '../../components/AgencyServices'
 import Difference from '../../components/Difference'
-import Industry from '../../components/Industry'
+import DigitalGrid from '../../components/DigitalGrid'
 import LatestNews from '../../components/LatestNews'
 import OurClients from '../../components/OurClients'
 import PageHeader from '../../components/PageHeader'
@@ -22,7 +22,7 @@ function HomePage() {
          <StartWorkingWithUs />
          <AgencyServices />
          <Difference />
-         <Industry />
+         <DigitalGrid />
          <LatestNews />
          <VideoBackground />
          <OurClients />

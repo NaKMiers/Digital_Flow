@@ -99,7 +99,7 @@ export const clientBrands = [
    brand10,
 ]
 
-// industry
+// digital grid
 export const imageLinkItems = [image3, image4, image5, image6]
 
 // subslides
