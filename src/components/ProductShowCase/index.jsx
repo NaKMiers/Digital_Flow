@@ -3,9 +3,7 @@ import styles from './style.module.scss'
 import Works from '../Works'
 
 function ProductShowCase() {
-   const [category, setCategories] = useState('all')
-   const [sort1, setSort1] = useState(false)
-   const [sort2, setSort2] = useState(false)
+   const [filter, setFilters] = useState({ category: 'All', sortByName: false, sortByAsc: false })
 
    return (
       <section className={styles.ProductShowCase}>
@@ -13,43 +11,46 @@ function ProductShowCase() {
             <div className={styles.filterWrap}>
                <div className={styles.filterLeft}>
                   <button
-                     className={category === 'all' ? styles.active : ''}
-                     onClick={() => setCategories('all')}
+                     className={filter.category === 'All' ? styles.active : ''}
+                     onClick={() => setFilters(prev => ({ ...prev, category: 'All' }))}
                   >
                      All
                   </button>
                   <button
-                     className={category === 'branding' ? styles.active : ''}
-                     onClick={() => setCategories('branding')}
+                     className={filter.category === 'Branding' ? styles.active : ''}
+                     onClick={() => setFilters(prev => ({ ...prev, category: 'Branding' }))}
                   >
                      Branding
                   </button>
                   <button
-                     className={category === 'illustration' ? styles.active : ''}
-                     onClick={() => setCategories('illustration')}
+                     className={filter.category === 'Illustration' ? styles.active : ''}
+                     onClick={() => setFilters(prev => ({ ...prev, category: 'Illustration' }))}
                   >
                      Illustration
                   </button>
                   <button
-                     className={category === 'marketing' ? styles.active : ''}
-                     onClick={() => setCategories('marketing')}
+                     className={filter.category === 'Marketing' ? styles.active : ''}
+                     onClick={() => setFilters(prev => ({ ...prev, category: 'Marketing' }))}
                   >
                      Marketing
                   </button>
                   <button
-                     className={category === 'web-design' ? styles.active : ''}
-                     onClick={() => setCategories('web-design')}
+                     className={filter.category === 'Web Design' ? styles.active : ''}
+                     onClick={() => setFilters(prev => ({ ...prev, category: 'Web Design' }))}
                   >
                      Web Design
                   </button>
                </div>
 
                <div className={styles.filterRight}>
-                  <div className={styles.sort} onClick={() => setSort1(!sort1)}>
+                  <div
+                     className={styles.sort}
+                     onClick={() => setFilters(prev => ({ ...prev, sortByName: !prev.sortByName }))}
+                  >
                      <span>Date</span>
 
                      <button className={styles.switchBtn}>
-                        <div className={sort1 ? styles.active : ''} />
+                        <div className={filter.sortByName ? styles.active : ''} />
                      </button>
 
                      <span>Name</span>
@@ -57,11 +58,14 @@ function ProductShowCase() {
 
                   <div className={styles.separate} />
 
-                  <div className={styles.sort} onClick={() => setSort2(!sort2)}>
+                  <div
+                     className={styles.sort}
+                     onClick={() => setFilters(prev => ({ ...prev, sortByAsc: !prev.sortByAsc }))}
+                  >
                      <span>Desc</span>
 
                      <button className={styles.switchBtn}>
-                        <div className={sort2 ? styles.active : ''} />
+                        <div className={filter.sortByAsc ? styles.active : ''} />
                      </button>
 
                      <span>Asc</span>
@@ -69,7 +73,7 @@ function ProductShowCase() {
                </div>
             </div>
 
-            <Works cases />
+            <Works cases filter={filter} />
          </div>
       </section>
    )

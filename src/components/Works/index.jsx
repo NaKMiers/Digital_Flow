@@ -1,12 +1,41 @@
-import React, { memo, useCallback, useEffect, useRef } from 'react'
+import React, { memo, useCallback, useEffect, useRef, useState } from 'react'
 import { recentWorks, works } from '../../data'
 import WorkItem from './WorkItem'
 import styles from './style.module.scss'
 
-function Works({ cases }) {
+function Works({ cases, filter }) {
    const partRef = useRef(null)
    const part1Ref = useRef(null)
    const part2Ref = useRef(null)
+   const [data, setData] = useState(works)
+
+   useEffect(() => {
+      if (cases && filter) {
+         let newData = []
+         newData = works.filter(
+            work => work.categories.includes(filter.category) || filter.category === 'All'
+         )
+
+         // sort by name or date
+         if (filter.sortByName) {
+            newData.sort((a, b) => {
+               let titleA = a.title.toLowerCase()
+               let titleB = b.title.toLowerCase()
+               return titleA < titleB ? -1 : titleA > titleB ? 1 : 0
+            })
+         } else {
+            newData.sort((a, b) => {
+               return a.createdAt < b.createdAt ? -1 : a.createdAt > b.createdAt ? 1 : 0
+            })
+         }
+         // desc or asc
+         newData = newData.reverse()
+         if (filter.sortByAsc) {
+            newData = newData.reverse()
+         }
+         setData(newData)
+      }
+   }, [cases, filter])
 
    const handleScrollAnimation = useCallback(() => {
       let elements = []
@@ -80,7 +109,7 @@ function Works({ cases }) {
             ) : (
                <>
                   <div className={`${styles.part} ${styles.fullWidth}`} ref={partRef}>
-                     {works.map((work, index) => (
+                     {data.map((work, index) => (
                         <WorkItem data={work} cases key={index} />
                      ))}
                   </div>
