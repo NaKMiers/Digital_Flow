@@ -1,4 +1,4 @@
-.RecentWork {
+.Works {
    position: relative;
    overflow: hidden;
    // background-color: blue;
@@ -25,6 +25,21 @@
 
 .part {
    width: 50%;
+
+   &.fullWidth {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+
+      & > .workItem {
+         width: 50%;
+
+         // mobile small
+         @media (max-width: 548px) {
+            width: 100%;
+         }
+      }
+   }
 
    // mobile
    @media (max-width: 768px) {
@@ -76,7 +91,6 @@
 .workItem {
    display: block;
    width: 100%;
-   // background: yellow;
    padding: 21px;
    cursor: pointer;
 
@@ -212,7 +226,14 @@
 
          color: var(--primary);
          transition: all 0.2s ease-in-out;
-         cursor: pointer;
+
+         & > div {
+            display: inline-block;
+            width: 0.5px;
+            height: 14px;
+            background: #ccc;
+            margin: 0 8px;
+         }
 
          &:hover {
             color: #000;

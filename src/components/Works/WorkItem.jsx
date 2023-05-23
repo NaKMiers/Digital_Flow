@@ -1,11 +1,10 @@
 import { faCamera, faClapperboard, faFileAlt, faLink } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { memo, useCallback, useRef } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import styles from './style.module.scss'
 
 function WorkItem({ data }) {
-   const navigate = useNavigate()
    const overlayRef = useRef(null)
    const iconWrapRef = useRef(null)
 
@@ -22,12 +21,7 @@ function WorkItem({ data }) {
    }, [])
 
    return (
-      <div
-         className={styles.workItem}
-         onMouseOver={handleMouseOver}
-         onMouseLeave={handleMouseLeave}
-         onClick={() => navigate('/cases')}
-      >
+      <div className={styles.workItem} onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
          <div className={styles.thumbnail}>
             <img src={data.thumbnail} alt='thumbnail' />
 
@@ -54,7 +48,12 @@ function WorkItem({ data }) {
             <div />
             <div>
                <span>{data.date} </span>
-               <Link to={`/categories/${data.category.toLowerCase()}`}>{data.category}</Link>
+               {data.categories.map((category, index) => (
+                  <Link to={`/categories/${category.toLowerCase()}`}>
+                     {category}
+                     {index !== data.categories.length - 1 && <div />}
+                  </Link>
+               ))}
             </div>
          </div>
       </div>

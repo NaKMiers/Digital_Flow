@@ -6,7 +6,7 @@ import LatestNews from '../../components/LatestNews'
 import OurClients from '../../components/OurClients'
 import PageHeader from '../../components/PageHeader'
 import Quote from '../../components/Quote'
-import RecentWork from '../../components/RecentWork'
+import Works from '../../components/Works'
 import Slider from '../../components/Slider'
 import StartWorkingWithUs from '../../components/StartWorkingWithUs'
 import VideoBackground from '../../components/VideoBackground'
@@ -17,7 +17,7 @@ function HomePage() {
       <div className={styles.HomePage}>
          <PageHeader />
          <Slider />
-         <RecentWork />
+         <Works />
          <Quote />
          <StartWorkingWithUs />
          <AgencyServices />

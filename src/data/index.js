@@ -39,6 +39,23 @@ import clien1 from '../assets/imgs/client1.jpg'
 import clien2 from '../assets/imgs/client2.jpg'
 import clien3 from '../assets/imgs/client3.jpg'
 
+import work1 from '../assets/imgs/work1.jpg'
+import work2 from '../assets/imgs/work2.jpg'
+import work3 from '../assets/imgs/work3.jpg'
+import work4 from '../assets/imgs/work4.jpg'
+import work5 from '../assets/imgs/work5.jpg'
+import work6 from '../assets/imgs/work6.jpg'
+import work7 from '../assets/imgs/work7.jpg'
+import work8 from '../assets/imgs/work8.jpg'
+import work9 from '../assets/imgs/work9.jpg'
+import work10 from '../assets/imgs/work10.jpg'
+import work11 from '../assets/imgs/work11.jpg'
+import work12 from '../assets/imgs/work12.jpg'
+import work13 from '../assets/imgs/work13.jpg'
+import work14 from '../assets/imgs/work14.jpg'
+import work15 from '../assets/imgs/work15.jpg'
+import work16 from '../assets/imgs/work16.jpg'
+
 // slides
 export const oriSlides = [
    {
@@ -67,25 +84,25 @@ export const recentWorks = [
       thumbnail: recentWork1,
       title: 'Website design red cover',
       date: '4 November, 2020 in',
-      category: 'Concepts',
+      categories: ['Concepts'],
    },
    {
       thumbnail: recentWork2,
       title: 'Graphic design make bootle',
       date: '4 November, 2020 in',
-      category: 'Concepts',
+      categories: ['Concepts'],
    },
    {
       thumbnail: recentWork3,
       title: 'Graphic design stylish chair',
       date: '4 November, 2020 in',
-      category: 'Graphic',
+      categories: ['Graphic'],
    },
    {
       thumbnail: recentWork4,
       title: 'Objects design yellow glasses',
       date: '4 November, 2020 in',
-      category: 'Graphic',
+      categories: ['Graphic'],
    },
 ]
 
@@ -212,4 +229,104 @@ export const testimonials = [
    oriTestimonials[oriTestimonials.length - 1],
    ...oriTestimonials,
    oriTestimonials[0],
+]
+
+// cases
+export const works = [
+   {
+      thumbnail: work1,
+      title: 'Graphic design stylish chair',
+      date: '4 November, 2020 in',
+      categories: ['Marketing', 'Web Design'],
+   },
+   {
+      thumbnail: work2,
+      title: 'Graphic design stylish bootle',
+      date: '4 November, 2020 in',
+      categories: ['Branding', 'Illustration'],
+   },
+   {
+      thumbnail: work3,
+      title: 'Graphic design stylish cable',
+      date: '4 November, 2020 in',
+      categories: ['Marketing', 'Web Design'],
+   },
+   {
+      thumbnail: work4,
+      title: 'Architect design stylish building',
+      date: '4 November, 2020 in',
+      categories: ['Marketing', 'Web Design'],
+   },
+   {
+      thumbnail: work5,
+      title: 'Graphic design red cover',
+      date: '4 November, 2020 in',
+      categories: ['Branding', 'Illustration'],
+   },
+   {
+      thumbnail: work6,
+      title: 'Graphic design stylish lamp',
+      date: '4 November, 2020 in',
+      categories: ['Web Design'],
+   },
+   {
+      thumbnail: work7,
+      title: 'Graphic design stylish books',
+      date: '4 November, 2020 in',
+      categories: ['Illustration', 'Web Design'],
+   },
+   {
+      thumbnail: work8,
+      title: 'Graphic design stylish vase',
+      date: '4 November, 2020 in',
+      categories: ['Illustration', 'Marketing'],
+   },
+   {
+      thumbnail: work9,
+      title: 'Graphic design stylish chair',
+      date: '4 November, 2020 in',
+      categories: ['Branding', 'Web Design'],
+   },
+   {
+      thumbnail: work10,
+      title: 'Website design red cover',
+      date: '4 November, 2020 in',
+      categories: ['Illustration', 'Web Design'],
+   },
+   {
+      thumbnail: work11,
+      title: 'Graphic design stylish globe',
+      date: '4 November, 2020 in',
+      categories: ['Web Design'],
+   },
+   {
+      thumbnail: work12,
+      title: 'Graphic design stylish chair',
+      date: '4 November, 2020 in',
+      categories: ['Marketing'],
+   },
+   {
+      thumbnail: work13,
+      title: 'Graphic design stylish chair',
+      date: '4 November, 2020 in',
+      categories: ['Illustration'],
+   },
+   {
+      thumbnail: work14,
+      title: 'Graphic design stylish furniture and macbook pro',
+      date: '3 November, 2020 in',
+      categories: ['Branding'],
+   },
+   {
+      thumbnail: work15,
+      title: 'Objects design blue and black',
+      date: '3 November, 2020 in',
+      categories: ['Marketing', 'Web Design'],
+   },
+   {
+      thumbnail: work16,
+      title: 'Graphic design stylish vase',
+      date: '3 November, 2020 in',
+      categories: ['Branding', 'Illustration'],
+   },
 ]

@@ -1,5 +1,5 @@
 .PageHeaderLite {
-   overflow: hidden;
+   // overflow: hidden;
 }
 
 .top {
@@ -63,6 +63,7 @@
       position: absolute;
       top: -90%;
       left: 100px;
+      z-index: -1;
 
       // tablet
       @media (max-width: 1200px) {
