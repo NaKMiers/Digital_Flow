@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { subSlides } from '../../data'
 import styles from './style.module.scss'
 
-function SubSlider() {
+function SubSlider({ style }) {
    const [slide, setSlide] = useState(1)
    const slideTrackRef = useRef(null)
 
@@ -12,7 +12,7 @@ function SubSlider() {
    }, [slide])
 
    return (
-      <div className={styles.slider}>
+      <div className={styles.SubSlider} style={{ ...style }}>
          <div className={styles.slidePagination}>
             {subSlides.map((_, index) => (
                <button

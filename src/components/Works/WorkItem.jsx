@@ -38,11 +38,7 @@ function WorkItem({ data, cases }) {
          <div className={`${styles.thumbnail} ${cases ? styles.type2 : ''}`}>
             <img src={data.thumbnail} alt='thumbnail' />
 
-            <div
-               to='/agency'
-               className={`${styles.overlay} ${cases ? styles.type2 : ''}`}
-               ref={overlayRef}
-            >
+            <div className={`${styles.overlay} ${cases ? styles.type2 : ''}`} ref={overlayRef}>
                {!cases ? (
                   <div className={styles.iconWrap} ref={iconWrapRef}>
                      <Link to='/doc' className={styles.iconLink}>

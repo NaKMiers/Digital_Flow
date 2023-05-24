@@ -56,6 +56,21 @@ import work14 from '../assets/imgs/work14.jpg'
 import work15 from '../assets/imgs/work15.jpg'
 import work16 from '../assets/imgs/work16.jpg'
 
+import blog1 from '../assets/imgs/blog1.jpg'
+import blog2 from '../assets/imgs/blog2.jpg'
+import blog3 from '../assets/imgs/blog3.jpg'
+import blog4 from '../assets/imgs/blog4.jpg'
+import blog5 from '../assets/imgs/blog5.jpg'
+import blog6 from '../assets/imgs/blog6.jpg'
+import blog7 from '../assets/imgs/blog7.jpg'
+import blog8 from '../assets/imgs/blog8.jpg'
+import blog9 from '../assets/imgs/blog9.jpg'
+import blog10 from '../assets/imgs/blog10.jpg'
+
+import subBlog1 from '../assets/imgs/subBlog1.jpg'
+import subBlog2 from '../assets/imgs/subBlog2.jpg'
+import admin from '../assets/imgs/admin.jpg'
+
 // slides
 export const oriSlides = [
    {
@@ -344,5 +359,116 @@ export const works = [
       date: '3 November, 2020 in',
       categories: ['Branding', 'Illustration'],
       createdAt: 1684861434566,
+   },
+]
+
+// blogs
+export const blogs = [
+   {
+      title: 'We are nominated to agency of year for the second time',
+      desc: 'Lorem ipsum dolor sit ametcon sectetur adipisicing elit, sed doiusmod tempor incidi labore et dolore. agna aliqua lorem ipsum. Dolore magnam aliquam quaerat voluptatem. Nemo enim ipsam voluptatem quia voluptas.',
+      createdAt: 1684861439879,
+      thumbnail: blog1,
+      categories: ['Media', 'Networks'],
+      date: 'November 2, 2020',
+   },
+   {
+      title: 'Dolore magnam aliquam quaerat voluptatem nemo enim',
+      desc: 'Lorem ipsum dolor sit ametcon sectetur adipisicing elit, sed doiusmod tempor incidi labore et dolore. agna aliqua lorem ipsum. Dolore magnam aliquam quaerat voluptatem. Nemo enim ipsam voluptatem quia voluptas.',
+      createdAt: 1684861439879,
+      thumbnail: blog2,
+      categories: ['Media', 'Networks'],
+      date: 'November 2, 2020',
+   },
+   {
+      title: 'Consequuntur magni sit dolores eos qui ratione duis voluptatem!',
+      desc: 'Lorem ipsum dolor sit ametcon sectetur adipisicing elit, sed doiusmod tempor incidi labore et dolore. agna aliqua lorem ipsum. Dolore magnam aliquam quaerat voluptatem. Nemo enim ipsam voluptatem quia voluptas.',
+      createdAt: 1684861439879,
+      thumbnail: blog3,
+      categories: ['Media', 'Networks'],
+      date: 'November 2, 2020',
+   },
+   {
+      title: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit',
+      desc: 'Lorem ipsum dolor sit ametcon sectetur adipisicing elit, sed doiusmod tempor incidi labore et dolore. agna aliqua lorem ipsum. Dolore magnam aliquam quaerat voluptatem. Nemo enim ipsam voluptatem quia voluptas.',
+      createdAt: 1684861439879,
+      thumbnail: blog4,
+      categories: ['Media', 'Networks'],
+      date: 'November 2, 2020',
+   },
+   {
+      title: 'Consequuntur magni sit dolores eos qui ratione duis voluptatem!',
+      desc: 'Lorem ipsum dolor sit ametcon sectetur adipisicing elit, sed doiusmod tempor incidi labore et dolore. agna aliqua lorem ipsum. Dolore magnam aliquam quaerat voluptatem. Nemo enim ipsam voluptatem quia voluptas.',
+      createdAt: 1684861439879,
+      thumbnail: blog5,
+      categories: ['Media', 'Networks'],
+      date: 'November 2, 2020',
+   },
+   {
+      title: 'We are nominated to agency of year for the second time',
+      desc: 'Lorem ipsum dolor sit ametcon sectetur adipisicing elit, sed doiusmod tempor incidi labore et dolore. agna aliqua lorem ipsum. Dolore magnam aliquam quaerat voluptatem. Nemo enim ipsam voluptatem quia voluptas.',
+      createdAt: 1684861439879,
+      thumbnail: blog6,
+      categories: ['Media', 'Networks'],
+      date: 'November 2, 2020',
+   },
+   {
+      title: 'Consequuntur magni sit dolores eos qui ratione duis voluptatem!',
+      desc: 'Lorem ipsum dolor sit ametcon sectetur adipisicing elit, sed doiusmod tempor incidi labore et dolore. agna aliqua lorem ipsum. Dolore magnam aliquam quaerat voluptatem. Nemo enim ipsam voluptatem quia voluptas.',
+      createdAt: 1684861439879,
+      thumbnail: blog7,
+      categories: ['Creative', 'Fashion'],
+      date: 'November 2, 2020',
+   },
+   {
+      title: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit',
+      desc: 'Lorem ipsum dolor sit ametcon sectetur adipisicing elit, sed doiusmod tempor incidi labore et dolore. agna aliqua lorem ipsum. Dolore magnam aliquam quaerat voluptatem. Nemo enim ipsam voluptatem quia voluptas.',
+      createdAt: 1684861439879,
+      thumbnail: blog8,
+      categories: ['Creative', 'Fashion'],
+      date: 'November 2, 2020',
+   },
+   {
+      title: 'Dolore magnam aliquam quaerat voluptatem nemo enim',
+      desc: 'Lorem ipsum dolor sit ametcon sectetur adipisicing elit, sed doiusmod tempor incidi labore et dolore. agna aliqua lorem ipsum. Dolore magnam aliquam quaerat voluptatem. Nemo enim ipsam voluptatem quia voluptas.',
+      createdAt: 1684861439879,
+      thumbnail: blog9,
+      categories: ['Creative', 'Fashion'],
+      date: 'November 2, 2020',
+   },
+   {
+      title: 'We are nominated to agency of year for the second time',
+      desc: 'Lorem ipsum dolor sit ametcon sectetur adipisicing elit, sed doiusmod tempor incidi labore et dolore. agna aliqua lorem ipsum. Dolore magnam aliquam quaerat voluptatem. Nemo enim ipsam voluptatem quia voluptas.',
+      createdAt: 1684861439879,
+      thumbnail: blog10,
+      categories: ['Creative', 'Fashion'],
+      date: 'November 2, 2020',
+   },
+]
+
+// sub blogs
+export const subBlogs = [
+   {
+      author: 'By admin',
+      avatar: admin,
+      title: 'Dolore magnam aliquam quaerat voluptatem',
+      desc: 'Lorem ipsum dolor sit ametcon sectetur adipisicing elit, sed doiusmod tempor incidi labore et dolore. agna aliqua lorem ipsum. Dolore magnam aliquam quaerat voluptatem. Nemo enim ipsam voluptatem quia voluptas.',
+      thumbnail: subBlog1,
+      categories: ['Living'],
+      date: 'November 3, 2020',
+      commands: 0,
+      createdAt: 1684861439879,
+   },
+
+   {
+      author: 'By admin',
+      avatar: admin,
+      title: 'We are nominated to agency of year for the second time',
+      desc: 'Lorem ipsum dolor sit ametcon sectetur adipisicing elit, sed doiusmod tempor incidi labore et dolore. agna aliqua lorem ipsum. Dolore magnam aliquam quaerat voluptatem. Nemo enim ipsam voluptatem quia voluptas.',
+      thumbnail: subBlog2,
+      categories: ['Reason'],
+      date: 'November 3, 2020',
+      commands: 0,
+      createdAt: 1684861439879,
    },
 ]

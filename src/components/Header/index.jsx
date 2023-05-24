@@ -204,10 +204,10 @@ function Header({ fixed }) {
                <li>
                   <NavLink
                      className={({ isActive }) => (isActive ? styles.active : '')}
-                     to='/blog'
+                     to='/blogs'
                      onClick={handleHideMenu}
                   >
-                     Blog
+                     Blogs
                   </NavLink>
                </li>
                <li>

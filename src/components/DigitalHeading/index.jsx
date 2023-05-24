@@ -48,26 +48,25 @@ function DigitalHeading({ data, style }) {
       }
    }, [handleScrollAnimation])
 
-   console.log(data.smallTitle)
    return (
       <section className={styles.DigitalHeading} style={{ ...style }}>
          <div className={styles.top} ref={topRef}>
             <h6>THEGEM DIGITAL AGENCY</h6>
-            <h1 className={data.smallTitle ? styles.smallTitle : ''}>{data.title}</h1>
+            <h1 className={data?.smallTitle ? styles.smallTitle : ''}>{data?.title}</h1>
          </div>
 
          <div className={styles.bottom}>
             <div className={styles.hero} />
 
             <div className={styles.content} ref={contentRef}>
-               {data.desc && (
+               {data?.desc && (
                   <>
                      {data.desc.map((datum, index) => (
                         <p key={index}>{datum}</p>
                      ))}
                   </>
                )}
-               {data.social && (
+               {data?.social && (
                   <div className={styles.social}>
                      <a href='/'>
                         <img src={facebook} alt='social' />
