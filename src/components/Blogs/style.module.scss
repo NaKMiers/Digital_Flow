@@ -1,5 +1,5 @@
 .Blogs {
-   padding: 120px 0 120px;
+   padding: 100px 0 120px;
    overflow: hidden;
 }
 
@@ -11,7 +11,7 @@
    width: 100%;
    margin: 0 auto;
 
-   background: cyan;
+   // background: cyan;
 }
 
 .blogItem {
@@ -155,7 +155,7 @@
 }
 
 .detail {
-   background: #eeee;
+   // background: #eeee;
    padding: 35px 0 10px;
 
    & > p:nth-of-type(1) {
@@ -166,7 +166,7 @@
       line-height: 20px;
       color: #bebebe;
 
-      background-color: aquamarine;
+      // background-color: aquamarine;
    }
 
    & > p:nth-of-type(2) {
@@ -177,7 +177,7 @@
       margin-bottom: 18px;
       transition: all 0.3s ease-in-out;
 
-      background-color: beige;
+      // background-color: beige;
    }
 
    & > p:nth-of-type(3) {
@@ -186,11 +186,11 @@
       line-height: 25px;
       color: #ababab;
 
-      background: #000;
+      // background: #000;
    }
 
    & > div {
-      background: blueviolet;
+      // background: blueviolet;
 
       display: flex;
       align-items: center;
