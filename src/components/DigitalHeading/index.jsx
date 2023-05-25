@@ -51,7 +51,7 @@ function DigitalHeading({ data, style }) {
    return (
       <section className={styles.DigitalHeading} style={{ ...style }}>
          <div className={styles.top} ref={topRef}>
-            <h6>THEGEM DIGITAL AGENCY</h6>
+            <h6>{data?.subTitle || 'THEGEM DIGITAL AGENCY'}</h6>
             <h1 className={data?.smallTitle ? styles.smallTitle : ''}>{data?.title}</h1>
          </div>
 

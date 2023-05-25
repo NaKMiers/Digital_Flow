@@ -25,7 +25,7 @@ a {
    cursor: pointer;
 }
 
-button, input {
+button, input, textarea {
    border: none;
    outline: none;
    cursor: pointer;

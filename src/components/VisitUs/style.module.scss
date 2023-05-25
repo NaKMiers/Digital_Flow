@@ -1,0 +1,51 @@
+.VisitUs {
+   background: url('../../assets/imgs/waveBackground.webp');
+   padding: 100px 0 130px;
+   overflow: hidden;
+}
+
+.container {
+   max-width: 1212px;
+   width: 100%;
+   margin: 0 auto;
+   padding: 35px 21px 0;
+   text-align: center;
+   // background: beige;
+
+   & > p:nth-of-type(1) {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      line-height: 25px;
+      margin-bottom: 40px;
+      // background: blueviolet;
+   }
+
+   & > p:nth-of-type(2) {
+      max-width: 790px;
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 37px;
+      font-family: 'Source Sans Pro', sans-serif;
+      margin: 0 auto 50px;
+      // background: blueviolet;
+   }
+
+   & > .socialsWrap {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      min-height: 42px;
+      gap: 20px;
+      // background: blueviolet;
+
+      & > a {
+         width: 32px;
+
+         & > img {
+            width: 100%;
+            filter: grayscale(1);
+         }
+      }
+   }
+}
