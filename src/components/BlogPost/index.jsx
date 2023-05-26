@@ -120,9 +120,9 @@ function BlogPost() {
                   <div className={styles.left}>
                      <span>By admin</span>
                      <div className={styles.sep} />
-                     <span>Creative</span>
+                     <span className={styles.category}>Creative</span>
                      <div className={styles.sep} />
-                     <span>Fashion</span>
+                     <span className={styles.category}>Fashion</span>
                      <div className={styles.sep} />
                      <span>November 3, 2020</span>
                   </div>

@@ -123,7 +123,7 @@ function DigitalGrid() {
 
       if (top < window.innerHeight && bottom > 0) {
          const progressElements = [...progressWrapRef.current.children]
-         progressWrapRef.current.classList.add(styles.appear)
+         progressWrapRef.current.classList.add(styles.appeared)
 
          if (!isCounting.current) {
             isCounting.current = true
