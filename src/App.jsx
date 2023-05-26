@@ -12,6 +12,7 @@ import ContactPage from './pages/ContactPage'
 import HomePage from './pages/HomePage'
 import ProductPage from './pages/ProductPage'
 import ServicesPage from './pages/ServicesPage'
+import CategoryPage from './pages/CategoryPage'
 
 function App() {
    return (
@@ -28,6 +29,7 @@ function App() {
             <Route path='/blogs' exact element={<BlogsPage />} />
             <Route path='/blogs/:id' exact={false} element={<BlogPage />} />
             <Route path='/contact' exact element={<ContactPage />} />
+            <Route path='/categories' exact element={<CategoryPage />} />
          </Routes>
 
          <ScrollToTopButton />

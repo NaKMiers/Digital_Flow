@@ -71,6 +71,20 @@ import subBlog1 from '../assets/imgs/subBlog1.jpg'
 import subBlog2 from '../assets/imgs/subBlog2.jpg'
 import admin from '../assets/imgs/admin.jpg'
 
+import relatedPost1 from '../assets/imgs/relatedPost1.jpg'
+import relatedPost2 from '../assets/imgs/relatedPost2.jpg'
+import relatedPost3 from '../assets/imgs/relatedPost3.jpg'
+import relatedPost4 from '../assets/imgs/relatedPost3.jpg'
+import relatedPost5 from '../assets/imgs/relatedPost5.jpg'
+import relatedPost6 from '../assets/imgs/relatedPost6.jpg'
+import relatedPost7 from '../assets/imgs/relatedPost7.jpg'
+import relatedPost8 from '../assets/imgs/relatedPost8.jpg'
+import relatedPost9 from '../assets/imgs/relatedPost9.jpg'
+import relatedPost10 from '../assets/imgs/relatedPost10.jpg'
+import relatedPost11 from '../assets/imgs/relatedPost10.jpg'
+import relatedPost12 from '../assets/imgs/relatedPost12.jpg'
+import relatedPost13 from '../assets/imgs/relatedPost13.jpg'
+import relatedPost14 from '../assets/imgs/relatedPost14.jpg'
 // slides
 export const oriSlides = [
    {
@@ -470,5 +484,121 @@ export const subBlogs = [
       date: 'November 3, 2020',
       commands: 0,
       createdAt: 1684861439879,
+   },
+]
+
+// related posts
+export const relatedPosts = [
+   {
+      id: 1,
+      thumbnail: relatedPost1,
+      text: 'We are nominated to agency of year for the',
+      date: '03 Nov 2020',
+      comments: 0,
+      likes: 1,
+   },
+   {
+      id: 2,
+      thumbnail: relatedPost2,
+      text: 'We are nominated to agency of year for the',
+      date: '03 Nov 2020',
+      comments: 0,
+      likes: 1,
+   },
+   {
+      id: 3,
+      thumbnail: relatedPost3,
+      text: 'We are nominated to agency of year for the',
+      date: '03 Nov 2020',
+      comments: 0,
+      likes: 1,
+   },
+   {
+      id: 4,
+      thumbnail: relatedPost4,
+      text: 'We are nominated to agency of year for the',
+      date: '03 Nov 2020',
+      comments: 0,
+      likes: 1,
+   },
+   {
+      id: 5,
+      thumbnail: relatedPost5,
+      text: 'We are nominated to agency of year for the',
+      date: '03 Nov 2020',
+      comments: 0,
+      likes: 1,
+   },
+   {
+      id: 6,
+      thumbnail: relatedPost6,
+      text: 'We are nominated to agency of year for the',
+      date: '03 Nov 2020',
+      comments: 0,
+      likes: 1,
+   },
+   {
+      id: 7,
+      thumbnail: relatedPost7,
+      text: 'We are nominated to agency of year for the',
+      date: '03 Nov 2020',
+      comments: 0,
+      likes: 1,
+   },
+   {
+      id: 8,
+      thumbnail: relatedPost8,
+      text: 'We are nominated to agency of year for the',
+      date: '03 Nov 2020',
+      comments: 0,
+      likes: 1,
+   },
+   {
+      id: 9,
+      thumbnail: relatedPost9,
+      text: 'We are nominated to agency of year for the',
+      date: '03 Nov 2020',
+      comments: 0,
+      likes: 1,
+   },
+   {
+      id: 10,
+      thumbnail: relatedPost10,
+      text: 'We are nominated to agency of year for the',
+      date: '03 Nov 2020',
+      comments: 0,
+      likes: 1,
+   },
+   {
+      id: 11,
+      thumbnail: relatedPost11,
+      text: 'We are nominated to agency of year for the',
+      date: '03 Nov 2020',
+      comments: 0,
+      likes: 1,
+   },
+   {
+      id: 12,
+      thumbnail: relatedPost12,
+      text: 'We are nominated to agency of year for the',
+      date: '03 Nov 2020',
+      comments: 0,
+      likes: 1,
+   },
+   {
+      id: 13,
+      thumbnail: relatedPost13,
+      text: 'We are nominated to agency of year for the',
+      date: '03 Nov 2020',
+      comments: 0,
+      likes: 1,
+   },
+   {
+      id: 14,
+      thumbnail: relatedPost14,
+      text: 'We are nominated to agency of year for the',
+      date: '03 Nov 2020',
+      comments: 0,
+      likes: 1,
    },
 ]

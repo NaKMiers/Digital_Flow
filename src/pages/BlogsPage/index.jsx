@@ -18,6 +18,7 @@ function BlogsPage() {
          <WorkWithProTeam />
          <SubBlogs />
          <Blogs data={blogs.slice(6, blogs.length)} />
+         <SubSlider style={{ marginBottom: 110 }} />
       </div>
    )
 }

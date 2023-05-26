@@ -90,22 +90,22 @@ function Footer() {
             <div className={styles.connectUs}>
                <h6>CONNECT WITH US</h6>
                <div className={styles.socialWrap} ref={socialWrapRef}>
-                  <div>
+                  <a href='https://twitter.com' target='_blank' rel='noreferrer'>
                      <img src={twitter} alt='social' />
                      <span>Twitter</span>
-                  </div>
-                  <div>
+                  </a>
+                  <a href='https://www.facebook.com' target='_blank' rel='noreferrer'>
                      <img src={facebook} alt='social' />
                      <span>Facebook</span>
-                  </div>
-                  <div>
+                  </a>
+                  <a href='https://www.pinterest.com' target='_blank' rel='noreferrer'>
                      <img src={pinterest} alt='social' />
                      <span>Pinterest</span>
-                  </div>
-                  <div>
+                  </a>
+                  <a href='https://www.youtube.com' target='_blank' rel='noreferrer'>
                      <img src={youtube} alt='social' />
                      <span>Youtube</span>
-                  </div>
+                  </a>
                </div>
                <p>
                   © Copyright <span>CodexThemes</span>

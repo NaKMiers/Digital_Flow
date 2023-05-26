@@ -22,7 +22,12 @@ function BlogItem({ data }) {
    }, [])
 
    return (
-      <div className={styles.blogItem} onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
+      <Link
+         to='/blogs/1'
+         className={styles.blogItem}
+         onMouseOver={handleMouseOver}
+         onMouseLeave={handleMouseLeave}
+      >
          <div className={styles.thumbnail}>
             <img src={data.thumbnail} alt='thumbnail' />
 
@@ -60,7 +65,7 @@ function BlogItem({ data }) {
                </div>
             </div>
          </div>
-      </div>
+      </Link>
    )
 }
 
