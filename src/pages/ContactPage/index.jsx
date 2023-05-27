@@ -1,7 +1,7 @@
 import React from 'react'
 import ContactForm from '../../components/ContactForm'
 import ContactInfo from '../../components/ContactInfo'
-import PageHeaderLite from '../../components/PageHeaderLite'
+import PageHeadingLite from '../../components/PageHeadingLite'
 import Parallax from '../../components/Parallax'
 import VisitUs from '../../components/VisitUs'
 import styles from './style.module.scss'
@@ -9,7 +9,7 @@ import styles from './style.module.scss'
 function ContactPage() {
    return (
       <section className={styles.ContactPage}>
-         <PageHeaderLite title='Contact' />
+         <PageHeadingLite title='Contact' />
          <ContactInfo />
          <Parallax />
          <VisitUs />

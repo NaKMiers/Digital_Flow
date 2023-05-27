@@ -4,7 +4,7 @@ import Difference from '../../components/Difference'
 import DigitalGrid from '../../components/DigitalGrid'
 import LatestNews from '../../components/LatestNews'
 import OurClients from '../../components/OurClients'
-import PageHeader from '../../components/PageHeader'
+import PageHeading from '../../components/PageHeading'
 import Quote from '../../components/Quote'
 import Works from '../../components/Works'
 import Slider from '../../components/Slider'
@@ -15,7 +15,7 @@ import styles from './style.module.scss'
 function HomePage() {
    return (
       <div className={styles.HomePage}>
-         <PageHeader />
+         <PageHeading />
          <Slider />
          <Works />
          <Quote />

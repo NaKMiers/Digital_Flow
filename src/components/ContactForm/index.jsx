@@ -81,19 +81,19 @@ function ContactForm() {
             <form className={styles.form}>
                <div className={styles.topForm} ref={topFormRef}>
                   <div>
-                     <input name='name' type='text' placeholder='Name*' />
+                     <input name='name' type='text' placeholder='Name*' required />
                      <div>
                         <FontAwesomeIcon icon={faUser} />
                      </div>
                   </div>
                   <div>
-                     <input name='email' type='email' placeholder='Email*' />
+                     <input name='email' type='email' placeholder='Email*' required />
                      <div>
                         <FontAwesomeIcon icon={faEnvelope} />
                      </div>
                   </div>
                   <div>
-                     <input name='website' type='url' placeholder='Website*' />
+                     <input name='website' type='url' placeholder='Website' />
                      <div>
                         <FontAwesomeIcon icon={faGlobe} />
                      </div>
@@ -101,7 +101,7 @@ function ContactForm() {
                </div>
 
                <div className={styles.middleForm} ref={middleFormRef}>
-                  <textarea name='message' rows='10' placeholder='Message'></textarea>
+                  <textarea name='message' rows='10' placeholder='Message' required></textarea>
                </div>
 
                <div className={styles.bottomForm} ref={bottomFormRef}>

@@ -120,6 +120,12 @@
          font-weight: 700;
          padding: 0 10px;
          border: 2px solid #000;
+         transition: all 0.2s ease-in-out;
+
+         &:hover {
+            color: #fff;
+            background-color: #000;
+         }
 
          // tablet
          @media (max-width: 768px) {

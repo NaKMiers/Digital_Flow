@@ -45,7 +45,7 @@ function Difference() {
       const bottom = parametersRef.current.getBoundingClientRect().bottom
 
       if (top < window.innerHeight && bottom > 0) {
-         if (!isCounting.current) {
+         if (!isCounting?.current && paramRef1?.current && paramRef2?.current && paramRef3?.current) {
             isCounting.current = true
             parametersRef.current.classList.add(styles.appeared)
 

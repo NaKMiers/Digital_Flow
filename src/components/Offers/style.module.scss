@@ -1,0 +1,145 @@
+.Offers {
+   padding: 100px 0 80px;
+   background: url(../../assets/imgs/waveBackground.webp);
+   overflow: hidden;
+}
+
+.container {
+   max-width: 1212px;
+   width: 100%;
+   margin: 0 auto;
+}
+
+.top {
+   padding: 35px 21px 0;
+   text-align: center;
+   // background: beige;
+
+   & > h6 {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 25px;
+      margin-bottom: 40px;
+      // background: cyan;
+   }
+
+   & > p {
+      max-width: 570px;
+      margin: 0 auto;
+
+      font-size: 24px;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 300;
+      line-height: 37px;
+      margin-bottom: 50px;
+      // background-color: cyan;
+   }
+}
+
+.pricingTable {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   padding: 35px 0 0;
+   // background: blueviolet;
+}
+
+.priceItem {
+   width: calc(100% / 3);
+   min-width: 271px;
+   padding: 30px 21px 0;
+   margin-bottom: 42px;
+   text-align: center;
+   // background: #ccc;
+
+   // mobile
+   @media (max-width: 768px) {
+      width: 50%;
+      padding: 30px 0 0;
+   }
+}
+.priceTitle {
+   padding: 38px 10px;
+   background: #000;
+
+   & > span:nth-of-type(1) {
+      display: block;
+      font-size: 36px;
+      font-weight: 300;
+      line-height: 38px;
+      color: #fff;
+      padding: 10px 0 20px;
+      // background: aquamarine;
+   }
+
+   & > span:nth-of-type(2) {
+      display: block;
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 38px;
+      color: var(--primary);
+      // background: beige;
+
+      & > span:nth-of-type(1) {
+         margin-right: 4px;
+      }
+   }
+
+   &.type2 {
+      background: var(--primary);
+      & > span:nth-of-type(1) {
+         color: #000;
+      }
+
+      & > span:nth-of-type(2) {
+         color: #000;
+      }
+   }
+}
+
+.features {
+   border: 2px solid #dfe5e8;
+   background-color: #fff;
+
+   & > .featuresWrap {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+
+      & > li {
+         font-size: 16px;
+         font-family: 'Source Sans Pro', sans-serif;
+         padding: 16px 10px;
+         line-height: 25px;
+
+         &.removed {
+            text-decoration: line-through;
+            color: #bebebe;
+         }
+
+         &:nth-child(even) {
+            background: #f4f6f7;
+         }
+      }
+   }
+
+   & > .orderBtnWrap {
+      margin-top: 17px;
+      // background-color: beige;
+
+      & > button {
+         height: 40px;
+         padding: 0 17px;
+         font-size: 14px;
+         font-weight: 700;
+         border: 2px solid #000;
+         margin: 25px 0;
+         transition: all 0.3s ease-in-out;
+
+         &:hover {
+            color: #fff;
+            background: #000;
+         }
+      }
+   }
+}

@@ -61,7 +61,7 @@ function LatestNews() {
             <div className={styles.news} ref={newsRef}>
                <div className={styles.newsItem}>
                   <p>November 4, 2020</p>
-                  <Link to='/blogs' className={styles.link}>
+                  <Link to='/blogs/1' className={styles.link}>
                      How collaborative teams create meaningful things in this time
                   </Link>
                   <p>We provide a free day to experience our benefits of digital world!</p>
@@ -78,7 +78,7 @@ function LatestNews() {
 
                <div className={styles.newsItem}>
                   <p>November 4, 2020</p>
-                  <Link to='/blogs' className={styles.link}>
+                  <Link to='/blogs/1' className={styles.link}>
                      Can your business become better with new technology?
                   </Link>
                   <p>We provide a free day to experience our benefits of digital world!</p>
@@ -95,7 +95,7 @@ function LatestNews() {
 
                <div className={styles.newsItem}>
                   <p>November 4, 2020</p>
-                  <Link to='/blogs' className={styles.link}>
+                  <Link to='/blogs/1' className={styles.link}>
                      We are nominated to agency of year for the second time
                   </Link>
                   <p>We provide a free day to experience our benefits of digital world!</p>

@@ -1,7 +1,7 @@
 import React, { memo, useCallback, useEffect, useRef } from 'react'
 import styles from './style.module.scss'
 
-function PageHeader() {
+function PageHeading() {
    const transHeadingRef = useRef(null)
    const shutterRef = useRef(null)
    const descRef = useRef(null)
@@ -43,7 +43,7 @@ function PageHeader() {
 
       if (top < window.innerHeight && bottom > 0) {
          descRef.current.classList.add(styles.split)
-         console.log('removed---PageHeader')
+         console.log('removed---PageHeading')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [])
@@ -58,7 +58,7 @@ function PageHeader() {
    }, [handleScrollAnimation])
 
    return (
-      <section className={styles.PageHeader}>
+      <section className={styles.PageHeading}>
          <div className={styles.top}>
             <div className={styles.heading}>
                <span>Digital</span> <span>Marketing.</span>
@@ -131,4 +131,4 @@ function PageHeader() {
    )
 }
 
-export default memo(PageHeader)
+export default memo(PageHeading)

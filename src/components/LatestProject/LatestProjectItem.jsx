@@ -1,10 +1,10 @@
 import { faCamera } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { useCallback, useRef } from 'react'
+import React, { memo, useCallback, useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import styles from './style.module.scss'
 
-function ProductImage({ data, main }) {
+function LatestProjectItem({ data }) {
    const navigate = useNavigate()
    const overlayRef = useRef(null)
    const iconWrapRef = useRef(null)
@@ -23,16 +23,17 @@ function ProductImage({ data, main }) {
 
    return (
       <div
-         className={`${styles.productImage} ${main ? styles.main : styles.secondary}`}
+         className={styles.latestProjectItem}
          onMouseOver={handleMouseOver}
          onMouseLeave={handleMouseLeave}
-         onClick={() => navigate('/img/1')}
+         onClick={() => navigate('/blogs/1')}
       >
-         <div>
-            <img src={data} alt='product' />
+         <div className={styles.thumbnail}>
+            <img src={data.thumbnail} alt='thumbnail' />
+
             <div className={styles.overlay} ref={overlayRef}>
                <div className={styles.iconWrap} ref={iconWrapRef}>
-                  <Link to='/imgs/1' className={styles.iconLink}>
+                  <Link to='/imgs/1' className={styles.iconLink} onClick={e => e.stopPropagation()}>
                      <FontAwesomeIcon icon={faCamera} />
                   </Link>
                </div>
@@ -42,4 +43,4 @@ function ProductImage({ data, main }) {
    )
 }
 
-export default ProductImage
+export default memo(LatestProjectItem)

@@ -111,6 +111,15 @@
 
    padding: 50px 25px;
    border: 1px solid #383838;
+   transition: all 0.2s ease-in-out;
+
+   &:hover {
+      border-color: #fff;
+      background: #fff;
+      & > .content {
+         color: #000;
+      }
+   }
 
    & > .image {
       width: 48px;
@@ -124,6 +133,7 @@
    & > .content {
       text-align: center;
       color: #777777;
+      transition: all 0.2s ease-in-out;
 
       & > p:nth-of-type(1) {
          font-size: 20px;

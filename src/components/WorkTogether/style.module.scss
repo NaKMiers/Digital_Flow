@@ -78,16 +78,21 @@
 .panelContent {
    display: flex;
    flex-wrap: wrap;
-   overflow: hidden;
+   overflow: scroll;
 
    max-height: 0;
    padding: 0 29px;
-
    transition: all 0.3s ease-in-out;
 
+   &::-webkit-scrollbar {
+      display: none;
+   }
+
    & > div {
+      height: 100%;
       width: 50%;
       padding: 0 21px;
+
       // background-color: aqua;
 
       // mobile

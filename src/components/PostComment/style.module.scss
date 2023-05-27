@@ -28,7 +28,7 @@
 }
 
 .formComment {
-   // padding: 0 21px;
+   overflow: hidden;
 }
 
 .infoArea {
@@ -137,6 +137,7 @@
    & > button {
       padding: 0 25px;
       margin: 72px 0 30px;
+      border-radius: 4px;
 
       font-size: 19px;
       font-weight: 700;

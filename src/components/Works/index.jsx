@@ -2,8 +2,10 @@ import React, { memo, useCallback, useEffect, useRef, useState } from 'react'
 import { recentWorks, works } from '../../data'
 import WorkItem from './WorkItem'
 import styles from './style.module.scss'
+import { useNavigate } from 'react-router-dom'
 
 function Works({ cases, filter }) {
+   const navigate = useNavigate()
    const partRef = useRef(null)
    const part1Ref = useRef(null)
    const part2Ref = useRef(null)
@@ -93,7 +95,7 @@ function Works({ cases, filter }) {
                            </span>
                         </div>
 
-                        <button>See all cases</button>
+                        <button onClick={() => navigate('/cases')}>See all cases</button>
                      </div>
 
                      <WorkItem data={recentWorks[0]} />

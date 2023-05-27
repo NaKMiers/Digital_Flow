@@ -59,6 +59,12 @@
 
       font-size: 19px;
       font-weight: 700;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+         color: #fff;
+         background: #000;
+      }
    }
 }
 

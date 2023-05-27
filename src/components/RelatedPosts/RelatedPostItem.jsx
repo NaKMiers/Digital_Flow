@@ -6,7 +6,7 @@ import styles from './style.module.scss'
 
 function RelatedPostItem({ data }) {
    return (
-      <Link to='/blogs/2' className={styles.postItem}>
+      <Link to='/blogs/1' className={styles.postItem}>
          <div className={styles.postThumbnail}>
             <img src={data.thumbnail} alt='post-thumnbail' />
          </div>

@@ -13,6 +13,7 @@ import HomePage from './pages/HomePage'
 import ProductPage from './pages/ProductPage'
 import ServicesPage from './pages/ServicesPage'
 import CategoryPage from './pages/CategoryPage'
+import ServicePage from './pages/ServicePage'
 
 function App() {
    return (
@@ -24,6 +25,7 @@ function App() {
             <Route path='/' exact element={<HomePage />} />
             <Route path='/agency' exact element={<AgencyPage />} />
             <Route path='/services' exact element={<ServicesPage />} />
+            <Route path='/services/:id' exact element={<ServicePage />} />
             <Route path='/cases' exact element={<CasesPage />} />
             <Route path='/cases/:id' exact={false} element={<ProductPage />} />
             <Route path='/blogs' exact element={<BlogsPage />} />

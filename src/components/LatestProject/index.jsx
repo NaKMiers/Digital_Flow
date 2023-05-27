@@ -1,9 +1,10 @@
-import React, { memo, useCallback, useEffect, useRef } from 'react'
+import React, { useCallback, useEffect, useRef } from 'react'
 import styles from './style.module.scss'
-import { useNavigate } from 'react-router-dom'
+import DigitalHeading from '../../components/DigitalHeading'
+import LatestProjectItem from './LatestProjectItem'
+import { latestProjects } from '../../data'
 
-function WorkWithProTeam() {
-   const navigate = useNavigate()
+function LatestProject() {
    const containerRef = useRef(null)
 
    const handleScrollAnimation = useCallback(() => {
@@ -12,6 +13,7 @@ function WorkWithProTeam() {
       elements.forEach(e => {
          const top = e.getBoundingClientRect().top
          const bottom = e.getBoundingClientRect().bottom
+
          if (top < window.innerHeight && bottom > 0) {
             e.classList.add('appear')
             e.classList.add(styles.appeared)
@@ -26,7 +28,7 @@ function WorkWithProTeam() {
          }
       })
       if (countAppeared === elements.length) {
-         console.log('removed---WorkWithProTeam')
+         console.log('removed---LatestProject')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [])
@@ -34,24 +36,32 @@ function WorkWithProTeam() {
    // appear on scroll
    useEffect(() => {
       handleScrollAnimation()
-
       window.addEventListener('scroll', handleScrollAnimation)
+
       return () => {
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [handleScrollAnimation])
 
    return (
-      <section className={styles.WorkWithProTeam}>
+      <section className={styles.LatestProject}>
+         <DigitalHeading
+            data={{
+               title: 'Latest project',
+               desc: [
+                  'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum sed ut perspiciatis unde omnis iste natus!',
+               ],
+            }}
+            style={{ padding: '120px 0 90px' }}
+         />
+
          <div className={styles.container} ref={containerRef}>
-            <h6>WORK WITH PRO TEAM</h6>
-
-            <h1>Would you like to have professional project? Let’s talk about it!</h1>
-
-            <button onClick={() => navigate('/contact')}>Get started</button>
+            {latestProjects.map((project, index) => (
+               <LatestProjectItem key={index} data={project} />
+            ))}
          </div>
       </section>
    )
 }
 
-export default memo(WorkWithProTeam)
+export default LatestProject

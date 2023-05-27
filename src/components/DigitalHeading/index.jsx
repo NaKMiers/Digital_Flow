@@ -68,19 +68,19 @@ function DigitalHeading({ data, style }) {
                )}
                {data?.social && (
                   <div className={styles.social}>
-                     <a href='/'>
+                     <a href='https://www.facebook.com' target='_blank' rel='noreferrer'>
                         <img src={facebook} alt='social' />
                      </a>
-                     <a href='/'>
+                     <a href='https://twitter.com' target='_blank' rel='noreferrer'>
                         <img src={twitter} alt='social' />
                      </a>
-                     <a href='/'>
+                     <a href='https://www.instagram.com' target='_blank' rel='noreferrer'>
                         <img src={instagram} alt='social' />
                      </a>
-                     <a href='/'>
+                     <a href='https://www.pinterest.com' target='_blank' rel='noreferrer'>
                         <img src={pinterest} alt='social' />
                      </a>
-                     <a href='/'>
+                     <a href='https://www.youtube.com' target='_blank' rel='noreferrer'>
                         <img src={youtube} alt='social' />
                      </a>
                   </div>

@@ -1,12 +1,12 @@
 import React from 'react'
-import PageHeaderLite from '../../components/PageHeaderLite'
+import PageHeadingLite from '../../components/PageHeadingLite'
 import BlogPost from '../../components/BlogPost'
 import styles from './style.module.scss'
 
 function BlogPage() {
    return (
       <div className={styles.BlogPage}>
-         <PageHeaderLite title='Blog' />
+         <PageHeadingLite title='Blog' />
          <BlogPost />
       </div>
    )

@@ -79,12 +79,17 @@
 
    & > button {
       height: 40px;
-
       font-size: 14px;
       font-weight: 700;
       padding: 0 17px;
       border: 2px solid #000;
       margin: 25px 25px 25px 0;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+         color: #fff;
+         background: #000;
+      }
    }
 }
 

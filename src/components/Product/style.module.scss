@@ -346,12 +346,17 @@
 
    &:hover {
       background: none;
+
+      & > .avatar {
+         filter: grayscale(1);
+      }
    }
 
    & > .avatar {
       width: 80px;
       height: 80px;
       margin-right: 22px;
+      transition: all 0.2s ease-in-out;
 
       & > img {
          width: 100%;

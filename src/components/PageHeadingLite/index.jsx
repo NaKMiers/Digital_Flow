@@ -1,9 +1,9 @@
 import React, { memo } from 'react'
 import styles from './style.module.scss'
 
-function PageHeaderLite({ title }) {
+function PageHeadingLite({ title }) {
    return (
-      <section className={styles.PageHeaderLite}>
+      <section className={styles.PageHeadingLite}>
          <div className={styles.top}>
             <h1 className={styles.heading}>{title}</h1>
          </div>
@@ -19,4 +19,4 @@ function PageHeaderLite({ title }) {
    )
 }
 
-export default memo(PageHeaderLite)
+export default memo(PageHeadingLite)

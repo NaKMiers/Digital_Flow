@@ -2,10 +2,12 @@ import { faFileAlt, faShareAlt } from '@fortawesome/free-solid-svg-icons'
 import { faHeart } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { Fragment, memo, useCallback, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import styles from './style.module.scss'
 
 function BlogItem({ data }) {
+   const navigate = useNavigate()
+
    const overlayRef = useRef(null)
    const iconWrapRef = useRef(null)
 
@@ -22,11 +24,12 @@ function BlogItem({ data }) {
    }, [])
 
    return (
-      <Link
+      <div
          to='/blogs/1'
          className={styles.blogItem}
          onMouseOver={handleMouseOver}
          onMouseLeave={handleMouseLeave}
+         onClick={() => navigate('/blogs/1')}
       >
          <div className={styles.thumbnail}>
             <img src={data.thumbnail} alt='thumbnail' />
@@ -34,7 +37,12 @@ function BlogItem({ data }) {
             <div className={styles.categories}>
                {data.categories.map((category, index) => (
                   <Fragment key={index}>
-                     <Link to={`/blogs/${category.toLowerCase()}`}>{category}</Link>
+                     <Link
+                        to={`/categories/${category.toLowerCase()}`}
+                        onClick={e => e.stopPropagation()}
+                     >
+                        {category}
+                     </Link>
                      {index !== data.categories.length - 1 && ', '}
                   </Fragment>
                ))}
@@ -42,7 +50,7 @@ function BlogItem({ data }) {
 
             <div className={styles.overlay} ref={overlayRef}>
                <div className={styles.iconWrap} ref={iconWrapRef}>
-                  <Link to='/doc' className={styles.iconLink}>
+                  <Link to='/doc' className={styles.iconLink} onClick={e => e.stopPropagation()}>
                      <FontAwesomeIcon icon={faFileAlt} />
                   </Link>
                </div>
@@ -65,7 +73,7 @@ function BlogItem({ data }) {
                </div>
             </div>
          </div>
-      </Link>
+      </div>
    )
 }
 

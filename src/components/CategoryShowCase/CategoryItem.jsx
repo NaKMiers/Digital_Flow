@@ -2,10 +2,11 @@ import { faFileAlt, faHeart } from '@fortawesome/free-regular-svg-icons'
 import { faShareAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { Fragment, useCallback, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import styles from './style.module.scss'
 
 function CategoryItem({ data }) {
+   const navigate = useNavigate()
    const overlayRef = useRef(null)
    const iconWrapRef = useRef(null)
 
@@ -22,14 +23,24 @@ function CategoryItem({ data }) {
    }, [])
 
    return (
-      <div className={styles.categoryItem} onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
+      <div
+         className={styles.categoryItem}
+         onMouseOver={handleMouseOver}
+         onMouseLeave={handleMouseLeave}
+         onClick={() => navigate('/blogs/1')}
+      >
          <div className={styles.thumbnail}>
             <img src={data.thumbnail} alt='thumbnail' />
 
             <div className={styles.categories}>
                {data.categories.map((category, index) => (
                   <Fragment key={index}>
-                     <Link to={`/blogs/${category.toLowerCase()}`}>{category} </Link>
+                     <Link
+                        to={`/categories/${category.toLowerCase()}`}
+                        onClick={e => e.stopPropagation()}
+                     >
+                        {category}{' '}
+                     </Link>
                      {index !== data.categories.length - 1 && <span style={{ marginRight: 3 }}>,</span>}
                   </Fragment>
                ))}

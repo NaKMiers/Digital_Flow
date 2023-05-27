@@ -20,7 +20,7 @@ function SubBlogItem({ data }) {
 
    return (
       <Link
-         to='/'
+         to='/blogs/1'
          className={styles.subBlogItem}
          onMouseOver={handleMouseOver}
          onMouseLeave={handleMouseLeave}

@@ -8,6 +8,7 @@ import service5 from '../../assets/imgs/service5.png'
 import service6 from '../../assets/imgs/service6.png'
 import service7 from '../../assets/imgs/service7.png'
 import service8 from '../../assets/imgs/service8.png'
+import { Link } from 'react-router-dom'
 
 function AgencyServices() {
    const topRef = useRef(null)
@@ -86,7 +87,7 @@ function AgencyServices() {
 
          <div className={styles.bottom}>
             <div className={styles.servicesWrap} ref={servicesWrapRef}>
-               <a className={styles.serviceItem} href='/'>
+               <Link className={styles.serviceItem} to='/services/sad'>
                   <div className={styles.service}>
                      <div className={styles.image}>
                         <img src={service1} alt='service' />
@@ -97,9 +98,9 @@ function AgencyServices() {
                         <p>WEB DEVELOPMENT</p>
                      </div>
                   </div>
-               </a>
+               </Link>
 
-               <a className={styles.serviceItem} href='/'>
+               <Link className={styles.serviceItem} to='/services/sad'>
                   <div className={styles.service}>
                      <div className={styles.image}>
                         <img src={service2} alt='service' />
@@ -110,9 +111,9 @@ function AgencyServices() {
                         <p>DESIGN</p>
                      </div>
                   </div>
-               </a>
+               </Link>
 
-               <a className={styles.serviceItem} href='/'>
+               <Link className={styles.serviceItem} to='/services/sad'>
                   <div className={styles.service}>
                      <div className={styles.image}>
                         <img src={service3} alt='service' />
@@ -123,9 +124,9 @@ function AgencyServices() {
                         <p>BRANDING</p>
                      </div>
                   </div>
-               </a>
+               </Link>
 
-               <a className={styles.serviceItem} href='/'>
+               <Link className={styles.serviceItem} to='/services/sad'>
                   <div className={styles.service}>
                      <div className={styles.image}>
                         <img src={service4} alt='service' />
@@ -136,9 +137,9 @@ function AgencyServices() {
                         <p>MARKETING</p>
                      </div>
                   </div>
-               </a>
+               </Link>
 
-               <a className={styles.serviceItem} href='/'>
+               <Link className={styles.serviceItem} to='/services/sad'>
                   <div className={styles.service}>
                      <div className={styles.image}>
                         <img src={service5} alt='service' />
@@ -149,9 +150,9 @@ function AgencyServices() {
                         <p>IOS APPS</p>
                      </div>
                   </div>
-               </a>
+               </Link>
 
-               <a className={styles.serviceItem} href='/'>
+               <Link className={styles.serviceItem} to='/services/sad'>
                   <div className={styles.service}>
                      <div className={styles.image}>
                         <img src={service6} alt='service' />
@@ -162,9 +163,9 @@ function AgencyServices() {
                         <p>CUSTOM CMS</p>
                      </div>
                   </div>
-               </a>
+               </Link>
 
-               <a className={styles.serviceItem} href='/'>
+               <Link className={styles.serviceItem} to='/services/sad'>
                   <div className={styles.service}>
                      <div className={styles.image}>
                         <img src={service7} alt='service' />
@@ -175,9 +176,9 @@ function AgencyServices() {
                         <p>ECOMMERCE</p>
                      </div>
                   </div>
-               </a>
+               </Link>
 
-               <a className={styles.serviceItem} href='/'>
+               <Link className={styles.serviceItem} to='/services/sad'>
                   <div className={styles.service}>
                      <div className={styles.image}>
                         <img src={service8} alt='service' />
@@ -188,7 +189,7 @@ function AgencyServices() {
                         <p>UI-UX DESIGN</p>
                      </div>
                   </div>
-               </a>
+               </Link>
             </div>
          </div>
       </section>

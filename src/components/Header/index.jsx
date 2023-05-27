@@ -97,6 +97,20 @@ function Header({ fixed }) {
       setOpenMenu(false)
    }, [])
 
+   // handle on press ESC
+   useEffect(() => {
+      const handleKeyPress = e => {
+         if (e.keyCode === 27) {
+            !openMenu ? handleShowMenu() : handleHideMenu()
+         }
+      }
+
+      window.addEventListener('keydown', handleKeyPress)
+      return () => {
+         window.removeEventListener('keydown', handleKeyPress)
+      }
+   }, [handleShowMenu, handleHideMenu, openMenu])
+
    return (
       <header className={`${styles.Header} ${fixed ? styles.fixed : ''}`} ref={headerRef}>
          {/* LOGO */}
@@ -133,12 +147,12 @@ function Header({ fixed }) {
                <FontAwesomeIcon icon={faChevronDown} />
             </div>
 
-            <div className={styles.dropDownBody} ref={langBodyRef} onMouseLeave={handleHideLanguage}>
-               <a href='/'>ENG</a>
-               <a href='/'>GER</a>
-               <a href='/'>FRA</a>
-               <a href='/'>SPA</a>
-               <a href='/'>ITA</a>
+            <div className={styles.languageBody} ref={langBodyRef} onMouseLeave={handleHideLanguage}>
+               <button>ENG</button>
+               <button>GER</button>
+               <button>FRA</button>
+               <button>SPA</button>
+               <button>ITA</button>
             </div>
          </div>
 
@@ -146,9 +160,9 @@ function Header({ fixed }) {
          <div className={`${styles.navIcon} ${styles.searchIcon}`}>
             <FontAwesomeIcon icon={faSearch} />
          </div>
-         <div className={`${styles.navIcon} ${styles.phoneIcon}`}>
+         <a href='tel:+84899320427' className={`${styles.navIcon} ${styles.phoneIcon}`}>
             <FontAwesomeIcon icon={faPhone} />
-         </div>
+         </a>
          <button className={`${styles.navIcon} ${styles.menuBtn}`} onClick={handleShowMenu}>
             <div />
             <div />

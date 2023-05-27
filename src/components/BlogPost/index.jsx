@@ -323,7 +323,7 @@ function BlogPost() {
                      pariatur. Excepteur sint.
                   </p>
 
-                  <Link to='/' className={styles.more}>
+                  <Link to='/blogs' className={styles.more}>
                      <div>
                         <FontAwesomeIcon icon={faChevronRight} />
                      </div>

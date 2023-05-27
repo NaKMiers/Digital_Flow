@@ -17,6 +17,7 @@ import styles from './style.module.scss'
 const productImages = [productImg1, productImg2, productImg3, productImg4, productImg5]
 
 function Product() {
+   const navigate = useNavigate()
    const isCounting = useRef(false)
    const diagramWrapRef = useRef(null)
 
@@ -103,8 +104,6 @@ function Product() {
       }
    }, [handleScrollAnimation])
 
-   const navigate = useNavigate()
-
    return (
       <section className={styles.Product}>
          <div className={styles.container}>
@@ -173,7 +172,7 @@ function Product() {
                      <div className={styles.diagram}>
                         <div className={styles.diagramLabel}>
                            <span>Databases</span>
-                           <span data-value='89'>89%</span>
+                           <span data-value='89'></span>
                         </div>
                         <div className={styles.diagramBar}>
                            <div />
@@ -182,7 +181,7 @@ function Product() {
                      <div className={styles.diagram}>
                         <div className={styles.diagramLabel}>
                            <span>Programming</span>
-                           <span data-value='73'>73%</span>
+                           <span data-value='73'></span>
                         </div>
                         <div className={styles.diagramBar}>
                            <div />
@@ -191,7 +190,7 @@ function Product() {
                      <div className={styles.diagram}>
                         <div className={styles.diagramLabel}>
                            <span>Marketing</span>
-                           <span data-value='48'>48%</span>
+                           <span data-value='48'></span>
                         </div>
                         <div className={styles.diagramBar}>
                            <div />
@@ -200,7 +199,7 @@ function Product() {
                      <div className={styles.diagram}>
                         <div className={styles.diagramLabel}>
                            <span>Design</span>
-                           <span data-value='65'>65%</span>
+                           <span data-value='65'></span>
                         </div>
                         <div className={styles.diagramBar}>
                            <div />

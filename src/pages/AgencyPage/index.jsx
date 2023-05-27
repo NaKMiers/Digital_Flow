@@ -3,7 +3,7 @@ import AwardsAndPrizes from '../../components/AwardsAndPrizes'
 import DigitalHeading from '../../components/DigitalHeading'
 import History from '../../components/History'
 import OurProcess from '../../components/OurProcess'
-import PageHeaderLite from '../../components/PageHeaderLite'
+import PageHeadingLite from '../../components/PageHeadingLite'
 import TeamMembers from '../../components/TeamMembers'
 import VideoBackground from '../../components/VideoBackground'
 import WorkTogether from '../../components/WorkTogether'
@@ -13,7 +13,7 @@ import styles from './style.module.scss'
 function AgencyPage() {
    return (
       <div className={styles.AgencyPage}>
-         <PageHeaderLite title='Agency' />
+         <PageHeadingLite title='Agency' />
          <VideoBackground />
          <DigitalHeading
             data={{

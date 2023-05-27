@@ -1,12 +1,12 @@
 import React from 'react'
 import styles from './style.module.scss'
-import PageHeaderLite from '../../components/PageHeaderLite'
+import PageHeadingLite from '../../components/PageHeadingLite'
 import CategoryShowCase from '../../components/CategoryShowCase'
 
 function CategoryPage() {
    return (
       <div className={styles.CategoryPage}>
-         <PageHeaderLite title='Interface' />
+         <PageHeadingLite title='Interface' />
          <CategoryShowCase />
       </div>
    )

@@ -3,9 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { Fragment, memo, useCallback, useEffect, useRef, useState } from 'react'
 import { maxSlideIndex, slideLength, slides, oriSlides } from '../../data'
 import styles from './style.module.scss'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 function Slider() {
+   const navigate = useNavigate()
+
    const [slide, setSlide] = useState(1)
    const [sliding, setSliding] = useState(false)
    const slideTrackRef = useRef(null)
@@ -99,7 +101,7 @@ function Slider() {
 
                      <h1>{slide.title}</h1>
 
-                     <button>READ MORE</button>
+                     <button onClick={() => navigate('/blogs/1')}>READ MORE</button>
                   </div>
                </div>
             ))}

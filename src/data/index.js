@@ -90,20 +90,24 @@ import categoryThumb1 from '../assets/imgs/categoryThumb1.jpg'
 import categoryThumb2 from '../assets/imgs/categoryThumb2.jpg'
 import categoryThumb3 from '../assets/imgs/categoryThumb3.jpg'
 
+import latestProject1 from '../assets/imgs/latestProject1.jpg'
+import latestProject2 from '../assets/imgs/latestProject2.jpg'
+import latestProject3 from '../assets/imgs/latestProject3.jpg'
+
 // slides
 export const oriSlides = [
    {
-      categories: ['Design'],
+      categories: ['Design', 'Interface'],
       title: 'We are nominated to agency of year for the second time',
       background: slideBackground1,
    },
    {
-      categories: ['Design'],
+      categories: ['Design', 'Interface'],
       title: 'Dolore magnam aliquam quaerat voluptatem nemo enim',
       background: slideBackground2,
    },
    {
-      categories: ['Design'],
+      categories: ['Design', 'Interface'],
       title: 'Consequuntur magni sit dolores eos qui ratione duis voluptatem!',
       background: slideBackground3,
    },
@@ -638,5 +642,21 @@ export const categories = [
       categories: ['Interface'],
       date: 'November 2, 2020',
       likes: 1,
+   },
+]
+
+// latest projects - services page
+export const latestProjects = [
+   {
+      thumbnail: latestProject1,
+      createdAt: 1684861439879,
+   },
+   {
+      thumbnail: latestProject2,
+      createdAt: 1684861439879,
+   },
+   {
+      thumbnail: latestProject3,
+      createdAt: 1684861439879,
    },
 ]
