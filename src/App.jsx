@@ -29,7 +29,7 @@ function App() {
             <Route path='/blogs' exact element={<BlogsPage />} />
             <Route path='/blogs/:id' exact={false} element={<BlogPage />} />
             <Route path='/contact' exact element={<ContactPage />} />
-            <Route path='/categories' exact element={<CategoryPage />} />
+            <Route path='/categories/:id' exact element={<CategoryPage />} />
          </Routes>
 
          <ScrollToTopButton />
