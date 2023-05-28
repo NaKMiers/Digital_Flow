@@ -6,8 +6,7 @@ function VideoBackground() {
    return (
       <section className={styles.VideoBackground}>
          <div className={styles.background}>
-            <video src={videoBg} loop autoPlay muted />
-            <div className={styles.overlay} />
+            <video src={videoBg} loop autoPlay muted playsInline />
          </div>
       </section>
    )

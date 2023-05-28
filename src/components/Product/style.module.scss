@@ -55,8 +55,10 @@
       line-height: 25px;
       word-wrap: break-word;
       color: #bebebe;
+      font-weight: 300;
 
       &.category {
+         cursor: pointer;
          color: var(--primary);
       }
    }
@@ -67,6 +69,7 @@
    align-items: center;
 
    & > .icon {
+      color: #000;
       font-size: 14px;
 
       & > span {
@@ -407,14 +410,15 @@
    border-radius: 3px;
    border: 2px solid var(--primary);
    color: var(--primary);
-   padding: 0 14px 0 3px;
 
    &.prevBtn {
       left: 21px;
+      padding: 0 14px 0 3px;
    }
 
    &.nextBtn {
       right: 21px;
+      padding: 0 3px 0 14px;
    }
 
    & > div {

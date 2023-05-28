@@ -51,6 +51,7 @@
       color: #bebebe;
 
       &.category {
+         cursor: pointer;
          color: var(--primary);
       }
    }

@@ -120,9 +120,13 @@ function BlogPost() {
                   <div className={styles.left}>
                      <span>By admin</span>
                      <div className={styles.sep} />
-                     <span className={styles.category}>Creative</span>
+                     <span className={styles.category} onClick={() => navigate('/categories/1')}>
+                        Creative
+                     </span>
                      <div className={styles.sep} />
-                     <span className={styles.category}>Fashion</span>
+                     <span className={styles.category} onClick={() => navigate('/categories/1')}>
+                        Fashion
+                     </span>
                      <div className={styles.sep} />
                      <span>November 3, 2020</span>
                   </div>

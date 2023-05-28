@@ -116,9 +116,13 @@ function Product() {
                      </div>
                      <span>November 3, 2020</span>
                      <div className={styles.sep} />
-                     <span className={styles.category}>Creative</span>
+                     <span className={styles.category} onClick={() => navigate('/categories/1')}>
+                        Creative
+                     </span>
                      <div className={styles.sep} />
-                     <span className={styles.category}>Fashion</span>
+                     <span className={styles.category} onClick={() => navigate('/categories/1')}>
+                        Fashion
+                     </span>
                   </div>
 
                   <div className={styles.right}>
@@ -259,10 +263,10 @@ function Product() {
                <span>PREV</span>
             </button>
             <button className={`${styles.bottomBtn} ${styles.nextBtn}`} ref={nextBtnRef}>
-               <div>
-                  <FontAwesomeIcon icon={faChevronLeft} />
-               </div>
                <span>NEXT</span>
+               <div>
+                  <FontAwesomeIcon icon={faChevronRight} />
+               </div>
             </button>
          </div>
       </section>
