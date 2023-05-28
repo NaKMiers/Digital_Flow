@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import styles from './style.module.scss'
 
 function PageTitle() {
@@ -15,4 +15,4 @@ function PageTitle() {
    )
 }
 
-export default PageTitle
+export default memo(PageTitle)

@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef } from 'react'
+import React, { memo, useCallback, useEffect, useRef } from 'react'
 import styles from './style.module.scss'
 import { clientBrands } from '../../data'
 
@@ -47,7 +47,7 @@ function OurClients() {
          }
       })
       if (countAppeared === elements.length + brandElements.length) {
-         console.log('removed---OurClients')
+         // console.log('removed---OurClients')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [])
@@ -107,4 +107,4 @@ function OurClients() {
    )
 }
 
-export default OurClients
+export default memo(OurClients)

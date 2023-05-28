@@ -33,7 +33,7 @@ function DigitalGallery() {
          }
       })
       if (countAppeared === elements.length) {
-         console.log('removed---DigitalGallery')
+         // console.log('removed---DigitalGallery')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [])

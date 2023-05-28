@@ -178,7 +178,7 @@ function DigitalGrid() {
          countAppeared++
       }
       if (countAppeared === progressItemElements.length + 1 + imageLinkItemElements.length) {
-         console.log('removed---DigitalGrid')
+         // console.log('removed---DigitalGrid')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [])

@@ -1,6 +1,6 @@
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+import React, { memo, useCallback, useEffect, useRef, useState } from 'react'
 import DigitalHeading from '../DigitalHeading'
 import styles from './style.module.scss'
 
@@ -99,7 +99,7 @@ function ClientsSayAboutUs() {
       if (top < window.innerHeight && bottom > 0) {
          sliderRef.current.classList.add('appear')
          // remove event when all are appeared
-         console.log('removed---ClientsSayAboutUs')
+         // console.log('removed---ClientsSayAboutUs')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [])
@@ -168,4 +168,4 @@ function ClientsSayAboutUs() {
    )
 }
 
-export default ClientsSayAboutUs
+export default memo(ClientsSayAboutUs)

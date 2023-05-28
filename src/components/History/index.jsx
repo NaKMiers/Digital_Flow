@@ -27,7 +27,7 @@ function History() {
          }
       })
       if (countAppeared === elements.length) {
-         console.log('removed---History')
+         // console.log('removed---History')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [])

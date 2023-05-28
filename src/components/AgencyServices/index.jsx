@@ -54,7 +54,7 @@ function AgencyServices() {
          }
       })
       if (countAppeared === topElements.length + servicesWrapElements.length) {
-         console.log('removed---AgencyServices')
+         // console.log('removed---AgencyServices')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [])

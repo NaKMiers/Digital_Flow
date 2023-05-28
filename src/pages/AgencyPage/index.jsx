@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import AwardsAndPrizes from '../../components/AwardsAndPrizes'
 import DigitalHeading from '../../components/DigitalHeading'
 import History from '../../components/History'
@@ -35,4 +35,4 @@ function AgencyPage() {
    )
 }
 
-export default AgencyPage
+export default memo(AgencyPage)

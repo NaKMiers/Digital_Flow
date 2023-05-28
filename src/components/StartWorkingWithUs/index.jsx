@@ -26,7 +26,7 @@ function StartWorkingWithUs() {
          }
       })
       if (countAppeared === elements.length) {
-         console.log('removed---StartWorkingWithUs')
+         // console.log('removed---StartWorkingWithUs')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [])

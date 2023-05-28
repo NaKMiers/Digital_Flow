@@ -1,7 +1,7 @@
 import { faCalendar } from '@fortawesome/free-regular-svg-icons'
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { useCallback, useEffect, useRef } from 'react'
+import React, { memo, useCallback, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import member1 from '../../assets/imgs/member1.jpg'
 import member2 from '../../assets/imgs/member2.jpg'
@@ -89,7 +89,7 @@ function Product() {
          countAppeared++
       }
       if (countAppeared === elements.length + 1) {
-         console.log('removed---Product')
+         // console.log('removed---Product')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [])
@@ -273,4 +273,4 @@ function Product() {
    )
 }
 
-export default Product
+export default memo(Product)

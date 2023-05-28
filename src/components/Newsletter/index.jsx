@@ -27,7 +27,7 @@ function Newsletter() {
          }
       })
       if (countAppeared === elements.length) {
-         console.log('removed---Newsletter')
+         // console.log('removed---Newsletter')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [])

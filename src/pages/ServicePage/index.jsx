@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import styles from './style.module.scss'
 import WorkWithProTeam from '../../components/WorkWithProTeam'
 import PageHeadingLite from '../../components/PageHeadingLite'
@@ -20,4 +20,4 @@ function ServicePage() {
    )
 }
 
-export default ServicePage
+export default memo(ServicePage)

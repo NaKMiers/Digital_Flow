@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import ContactForm from '../../components/ContactForm'
 import ContactInfo from '../../components/ContactInfo'
 import PageHeadingLite from '../../components/PageHeadingLite'
@@ -18,4 +18,4 @@ function ContactPage() {
    )
 }
 
-export default ContactPage
+export default memo(ContactPage)

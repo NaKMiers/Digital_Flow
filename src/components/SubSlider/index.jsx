@@ -1,4 +1,4 @@
-import React, { Fragment, useCallback, useEffect, useRef, useState } from 'react'
+import React, { Fragment, memo, useCallback, useEffect, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { subSlides } from '../../data'
 import styles from './style.module.scss'
@@ -23,7 +23,7 @@ function SubSlider({ style }) {
          subSliderRef.current.classList.add(styles.appeared)
 
          // remove event when all are appeared
-         console.log('removed---SubSlider')
+         // console.log('removed---SubSlider')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [])
@@ -78,4 +78,4 @@ function SubSlider({ style }) {
    )
 }
 
-export default SubSlider
+export default memo(SubSlider)

@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef } from 'react'
+import React, { memo, useCallback, useEffect, useRef } from 'react'
 import styles from './style.module.scss'
 import DigitalHeading from '../DigitalHeading'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -49,7 +49,7 @@ function ContactForm() {
          }
       })
       if (countAppeared === topFormElements.length + bottomFormElements.length) {
-         console.log('removed---ContactForm')
+         // console.log('removed---ContactForm')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [])
@@ -113,4 +113,4 @@ function ContactForm() {
    )
 }
 
-export default ContactForm
+export default memo(ContactForm)

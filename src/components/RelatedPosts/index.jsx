@@ -138,7 +138,7 @@ function RelatedPosts() {
          }
       })
       if (countAppeared === topElements.length + postElements.length) {
-         console.log('removed---relatedPosts')
+         // console.log('removed---RelatedPosts')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [])

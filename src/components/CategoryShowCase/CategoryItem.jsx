@@ -1,7 +1,7 @@
 import { faFileAlt, faHeart } from '@fortawesome/free-regular-svg-icons'
 import { faShareAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { Fragment, useCallback, useRef } from 'react'
+import React, { Fragment, memo, useCallback, useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import styles from './style.module.scss'
 
@@ -75,4 +75,4 @@ function CategoryItem({ data }) {
    )
 }
 
-export default CategoryItem
+export default memo(CategoryItem)

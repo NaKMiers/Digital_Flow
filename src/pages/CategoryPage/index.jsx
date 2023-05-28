@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import styles from './style.module.scss'
 import PageHeadingLite from '../../components/PageHeadingLite'
 import CategoryShowCase from '../../components/CategoryShowCase'
@@ -12,4 +12,4 @@ function CategoryPage() {
    )
 }
 
-export default CategoryPage
+export default memo(CategoryPage)

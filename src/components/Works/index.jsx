@@ -65,7 +65,7 @@ function Works({ cases, filter }) {
          }
       })
       if (countAppeared === elements.length) {
-         console.log('removed---Works')
+         // console.log('removed---Works')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [cases])

@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef } from 'react'
+import React, { memo, useCallback, useEffect, useRef } from 'react'
 import styles from './style.module.scss'
 import DigitalHeading from '../../components/DigitalHeading'
 import LatestProjectItem from './LatestProjectItem'
@@ -28,7 +28,7 @@ function LatestProject() {
          }
       })
       if (countAppeared === elements.length) {
-         console.log('removed---LatestProject')
+         // console.log('removed---LatestProject')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [])
@@ -64,4 +64,4 @@ function LatestProject() {
    )
 }
 
-export default LatestProject
+export default memo(LatestProject)

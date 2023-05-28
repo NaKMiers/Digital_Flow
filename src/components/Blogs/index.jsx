@@ -28,7 +28,7 @@ function Blogs({ data }) {
       })
 
       if (countAppeared === elements.length) {
-         console.log('removed---Blogs')
+         // console.log('removed---Blogs')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [])

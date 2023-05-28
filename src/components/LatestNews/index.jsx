@@ -34,7 +34,7 @@ function LatestNews() {
          }
       })
       if (countAppeared === elements.length) {
-         console.log('removed---LatestNews')
+         // console.log('removed---LatestNews')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [])

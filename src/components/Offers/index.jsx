@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef } from 'react'
+import React, { memo, useCallback, useEffect, useRef } from 'react'
 import styles from './style.module.scss'
 
 function Offers() {
@@ -26,7 +26,7 @@ function Offers() {
          }
       })
       if (countAppeared === elements.length) {
-         console.log('removed---Offers')
+         // console.log('removed---Offers')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [])
@@ -130,4 +130,4 @@ function Offers() {
    )
 }
 
-export default Offers
+export default memo(Offers)

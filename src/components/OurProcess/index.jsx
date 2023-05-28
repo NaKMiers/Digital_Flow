@@ -49,7 +49,7 @@ function OurProcess() {
          }
       })
       if (countAppeared === topElements.length + quickFinderElements.length) {
-         console.log('removed---OurProcess')
+         // console.log('removed---OurProcess')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [])

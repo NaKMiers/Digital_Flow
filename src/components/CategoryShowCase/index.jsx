@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef } from 'react'
+import React, { memo, useCallback, useEffect, useRef } from 'react'
 import { categories } from '../../data'
 import CategoryItem from './CategoryItem'
 import styles from './style.module.scss'
@@ -27,7 +27,7 @@ function CategoryShowCase() {
          }
       })
       if (countAppeared === elements.length) {
-         console.log('removed---CategoryShowCase')
+         // console.log('removed---CategoryShowCase')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [])
@@ -55,4 +55,4 @@ function CategoryShowCase() {
    )
 }
 
-export default CategoryShowCase
+export default memo(CategoryShowCase)

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { memo, useState } from 'react'
 import styles from './style.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
@@ -152,4 +152,4 @@ function WorkTogether() {
    )
 }
 
-export default WorkTogether
+export default memo(WorkTogether)

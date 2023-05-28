@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import styles from './style.module.scss'
 import PageHeadingLite from '../../components/PageHeadingLite'
 import Product from '../../components/Product'
@@ -12,4 +12,4 @@ function ProductPage() {
    )
 }
 
-export default ProductPage
+export default memo(ProductPage)

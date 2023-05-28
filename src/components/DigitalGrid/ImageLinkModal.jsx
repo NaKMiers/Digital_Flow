@@ -7,7 +7,7 @@ import {
    faX,
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { memo, useEffect, useRef, useState } from 'react'
 import { imageLinkItems } from '../../data'
 import styles from './style.module.scss'
 
@@ -137,4 +137,4 @@ function ImageLinkModal({ index, setImageIndex }) {
    )
 }
 
-export default ImageLinkModal
+export default memo(ImageLinkModal)

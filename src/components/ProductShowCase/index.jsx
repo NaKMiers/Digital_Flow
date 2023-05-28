@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { memo, useState } from 'react'
 import styles from './style.module.scss'
 import Works from '../Works'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -93,4 +93,4 @@ function ProductShowCase() {
    )
 }
 
-export default ProductShowCase
+export default memo(ProductShowCase)

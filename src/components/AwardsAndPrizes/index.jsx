@@ -28,7 +28,7 @@ function AwardsAndPrices() {
       })
       if (countAppeared === elements.length) {
          window.removeEventListener('scroll', handleScrollAnimation)
-         console.log('removed---AwardsAndPrices')
+         // console.log('removed---AwardsAndPrices')
       }
    }, [])
 

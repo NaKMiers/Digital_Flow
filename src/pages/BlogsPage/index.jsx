@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Blogs from '../../components/Blogs'
 import SubBlogs from '../../components/SubBlogs'
 import PageHeadingLite from '../../components/PageHeadingLite'
@@ -23,4 +23,4 @@ function BlogsPage() {
    )
 }
 
-export default BlogsPage
+export default memo(BlogsPage)

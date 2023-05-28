@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import styles from './style.module.scss'
 
 function Quote() {
@@ -19,4 +19,4 @@ function Quote() {
    )
 }
 
-export default Quote
+export default memo(Quote)

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PageHeadingLite from '../../components/PageHeadingLite'
 import BlogPost from '../../components/BlogPost'
 import styles from './style.module.scss'
@@ -12,4 +12,4 @@ function BlogPage() {
    )
 }
 
-export default BlogPage
+export default memo(BlogPage)

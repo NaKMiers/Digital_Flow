@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import styles from './style.module.scss'
 import PageHeadingLite from '../../components/PageHeadingLite'
 import Quote from '../../components/Quote'
@@ -14,4 +14,4 @@ function CasesPage() {
    )
 }
 
-export default CasesPage
+export default memo(CasesPage)

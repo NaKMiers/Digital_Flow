@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+import React, { memo, useCallback, useEffect, useRef, useState } from 'react'
 import styles from './style.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCopy, faEnvelope, faGlobe, faUser, faCheck } from '@fortawesome/free-solid-svg-icons'
@@ -30,7 +30,7 @@ function PostComment() {
          }
       })
       if (countAppeared === elements.length) {
-         console.log('removed---PostComment')
+         // console.log('removed---PostComment')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [])
@@ -107,4 +107,4 @@ function PostComment() {
    )
 }
 
-export default PostComment
+export default memo(PostComment)

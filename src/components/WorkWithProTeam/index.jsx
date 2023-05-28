@@ -26,7 +26,7 @@ function WorkWithProTeam() {
          }
       })
       if (countAppeared === elements.length) {
-         console.log('removed---WorkWithProTeam')
+         // console.log('removed---WorkWithProTeam')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [])

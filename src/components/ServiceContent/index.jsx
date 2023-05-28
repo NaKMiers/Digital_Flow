@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+import React, { memo, useCallback, useEffect, useRef, useState } from 'react'
 import styles from './style.module.scss'
 import serviceImage1 from '../../assets/imgs/serviceImage1.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -77,7 +77,7 @@ function ServiceContent() {
          countAppeared++
       }
       if (countAppeared === elements.length + 1) {
-         console.log('removed---ServiceContent')
+         // console.log('removed---ServiceContent')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [])
@@ -258,4 +258,4 @@ function ServiceContent() {
    )
 }
 
-export default ServiceContent
+export default memo(ServiceContent)

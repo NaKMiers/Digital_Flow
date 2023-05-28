@@ -96,7 +96,7 @@ function Difference() {
          countAppeared++
       }
       if (countAppeared === topElements.length + 1 + quickFinderElements.length) {
-         console.log('removed---Difference')
+         // console.log('removed---Difference')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [isCounting])

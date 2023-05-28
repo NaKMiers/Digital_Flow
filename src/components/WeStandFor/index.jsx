@@ -46,7 +46,7 @@ function WeStandFor() {
          }
       })
       if (countAppeared === topElements.length + quickFindersElements.length) {
-         console.log('removed---WeStandFor')
+         // console.log('removed---WeStandFor')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [])

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import AgencyServices from '../../components/AgencyServices'
 import DigitalGallery from '../../components/DigitalGallery'
 import PageHeadingLite from '../../components/PageHeadingLite'
@@ -18,4 +18,4 @@ function ServicesPage() {
    )
 }
 
-export default ServicesPage
+export default memo(ServicesPage)

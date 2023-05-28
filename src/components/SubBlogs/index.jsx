@@ -40,7 +40,7 @@ function SubBlogs() {
          }
       })
       if (countAppeared === elements.length) {
-         console.log('removed---SubBlogs')
+         // console.log('removed---SubBlogs')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [flattenArray])

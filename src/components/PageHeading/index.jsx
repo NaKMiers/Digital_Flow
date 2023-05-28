@@ -43,7 +43,7 @@ function PageHeading() {
 
       if (top < window.innerHeight && bottom > 0) {
          descRef.current.classList.add(styles.split)
-         console.log('removed---PageHeading')
+         // console.log('removed---PageHeading')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [])

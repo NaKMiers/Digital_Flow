@@ -51,7 +51,7 @@ function VisitUs() {
          }
       })
       if (countAppeared === topElements.length + socialsWrapElements.length) {
-         console.log('removed---VisitUs')
+         // console.log('removed---VisitUs')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [])

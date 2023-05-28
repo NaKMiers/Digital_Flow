@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef } from 'react'
+import React, { memo, useCallback, useEffect, useRef } from 'react'
 import styles from './style.module.scss'
 import facebook from '../../assets/imgs/facebook.png'
 import twitter from '../../assets/imgs/twitter.png'
@@ -33,7 +33,7 @@ function DigitalHeading({ data, style }) {
       })
 
       if (countAppeared === elements.length) {
-         console.log('removed---DigitalHeading')
+         // console.log('removed---DigitalHeading')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [])
@@ -91,4 +91,4 @@ function DigitalHeading({ data, style }) {
    )
 }
 
-export default DigitalHeading
+export default memo(DigitalHeading)

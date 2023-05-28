@@ -51,7 +51,7 @@ function Footer() {
       })
 
       if (countAppeared === footerElements.length + socialElements.length) {
-         console.log('removed---Footer')
+         // console.log('removed---Footer')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [])

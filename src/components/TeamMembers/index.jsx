@@ -48,7 +48,7 @@ function TeamMembers() {
          }
       })
       if (countAppeared === topElements.length + teamMembersElements.length) {
-         console.log('removed---TeamMembers')
+         // console.log('removed---TeamMembers')
          window.removeEventListener('scroll', handleScrollAnimation)
       }
    }, [])
