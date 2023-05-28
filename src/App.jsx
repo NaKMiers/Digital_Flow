@@ -19,7 +19,7 @@ function App() {
    return (
       <div className={styles.App}>
          <Header />
-         {/* <Header fixed /> */}
+         <Header fixed />
 
          <Routes>
             <Route path='/' exact element={<HomePage />} />

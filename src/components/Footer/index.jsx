@@ -78,12 +78,12 @@ function Footer() {
             </div>
 
             <div className={styles.contactInfo}>
-               <span>08 New Hampshire Avenue #100, New Yourk, DC 20037, United States</span>
+               <span>49 Trinh Dinh Trong, Phu Trung, Tan Phu District, Ho Chi Minh city, Vietnam</span>
                <span>
-                  Phone: +1 916-875-2235 <br /> Fax: +1 916-875-2235
+                  Phone: +84 899-320-427 <br /> Fax: +84 899-320-427
                </span>
                <span>
-                  Email: <a href='mailto:diwas118151@gmail.com'>info@domain.tld</a>
+                  Email: <a href='mailto:diwas118151@gmail.com'>diwas118151@gmail.com</a>
                </span>
             </div>
 

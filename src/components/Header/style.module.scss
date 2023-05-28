@@ -7,7 +7,6 @@
    width: 100%;
    height: var(--header-height-1);
    padding: 0 21px;
-   overflow: hidden;
 
    &.fixed {
       --header-height-2: 55px;
@@ -78,9 +77,12 @@
    align-items: center;
 
    padding: 0 10px;
-   font-family: 'Source Sans Pro', sans-serif;
-   font-size: 14px;
    cursor: pointer;
+
+   & > span {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 14px;
+   }
 
    & > .dropIcon {
       margin-left: 4px;
@@ -107,9 +109,11 @@
       box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.15);
 
       line-height: 28px;
-      font-family: 'Source Sans Pro', sans-serif;
 
       & > button {
+         font-size: 14px;
+         font-family: 'Source Sans Pro', sans-serif;
+         line-height: 28px;
          transition: all 0.2s ease-in-out;
 
          &:hover {

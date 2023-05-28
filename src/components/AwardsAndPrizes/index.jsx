@@ -59,8 +59,8 @@ function AwardsAndPrices() {
                      <img src={award} alt='award' />
                   </div>
 
-                  <p>DIGITAL MARKETING 2017</p>
-                  <p>Award 2017</p>
+                  <p>DIGITAL MARKETING 2021</p>
+                  <p>Award 2021</p>
                </div>
 
                <div className={styles.awardItem}>
@@ -68,8 +68,8 @@ function AwardsAndPrices() {
                      <img src={award} alt='award' />
                   </div>
 
-                  <p>DIGITAL MARKETING 2018</p>
-                  <p>Award 2018</p>
+                  <p>DIGITAL MARKETING 2022</p>
+                  <p>Award 2022</p>
                </div>
 
                <div className={styles.awardItem}>
@@ -77,8 +77,8 @@ function AwardsAndPrices() {
                      <img src={award} alt='award' />
                   </div>
 
-                  <p>DIGITAL MARKETING 2019</p>
-                  <p>Award 2019</p>
+                  <p>DIGITAL MARKETING 2023</p>
+                  <p>Award 2023</p>
                </div>
             </div>
          </div>

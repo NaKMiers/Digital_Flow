@@ -47,7 +47,7 @@ function History() {
          <div className={styles.container}>
             <div className={styles.part} ref={part1Ref}>
                <div className={styles.historyItem}>
-                  <h1 className={styles.year}>2007</h1>
+                  <h1 className={styles.year}>2017</h1>
 
                   <div className={styles.content}>
                      <p>Excepteur sint occaecat cupidatat non proident</p>
@@ -59,7 +59,7 @@ function History() {
                </div>
 
                <div className={styles.historyItem}>
-                  <h1 className={styles.year}>2009</h1>
+                  <h1 className={styles.year}>2018</h1>
 
                   <div className={styles.content}>
                      <p>Excepteur sint occaecat cupidatat non proident</p>
@@ -71,7 +71,7 @@ function History() {
                </div>
 
                <div className={styles.historyItem}>
-                  <h1 className={styles.year}>2012</h1>
+                  <h1 className={styles.year}>2019</h1>
 
                   <div className={styles.content}>
                      <p>Excepteur sint occaecat cupidatat non proident</p>
@@ -83,7 +83,7 @@ function History() {
                </div>
 
                <div className={styles.historyItem}>
-                  <h1 className={styles.year}>2016</h1>
+                  <h1 className={styles.year}>2020</h1>
 
                   <div className={styles.content}>
                      <p>Excepteur sint occaecat cupidatat non proident</p>
@@ -97,7 +97,7 @@ function History() {
 
             <div className={styles.part} ref={part2Ref}>
                <div className={styles.historyItem}>
-                  <h1 className={styles.year}>2017</h1>
+                  <h1 className={styles.year}>2021</h1>
 
                   <div className={styles.content}>
                      <p>Excepteur sint occaecat cupidatat non proident</p>
@@ -108,7 +108,7 @@ function History() {
                   </div>
                </div>
                <div className={styles.historyItem}>
-                  <h1 className={styles.year}>2018</h1>
+                  <h1 className={styles.year}>2022</h1>
 
                   <div className={styles.content}>
                      <p>Excepteur sint occaecat cupidatat non proident</p>
@@ -119,7 +119,7 @@ function History() {
                   </div>
                </div>
                <div className={styles.historyItem}>
-                  <h1 className={styles.year}>2019</h1>
+                  <h1 className={styles.year}>2023</h1>
 
                   <div className={styles.content}>
                      <p>Excepteur sint occaecat cupidatat non proident</p>
