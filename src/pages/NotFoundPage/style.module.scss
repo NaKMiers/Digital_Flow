@@ -1,0 +1,83 @@
+.NotFoundPage {
+   overflow: hidden;
+}
+
+.container {
+   max-width: 808px;
+   width: 100%;
+   margin: 0 auto;
+   padding: 35px 21px 85px 21px;
+   text-align: center;
+   // background: beige;
+
+   & > span {
+      display: block;
+      // line-height: 217px;
+      font-size: 250px;
+      font-weight: 300;
+      color: var(--primary);
+      margin-bottom: 1.1rem;
+      // background: bisque;
+
+      // tablet
+      @media (max-width: 808px) {
+         font-size: 31vw;
+      }
+   }
+
+   & > p:nth-of-type(1) {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 53px;
+      margin-bottom: 1.1rem;
+      // background: cyan;
+
+      // tablet
+      @media (max-width: 1200px) {
+         font-size: 28px;
+         line-height: 42px;
+      }
+   }
+
+   & > p:nth-of-type(2) {
+      font-size: 24px;
+      font-weight: 300;
+      font-family: 'Source Sans Pro', sans-serif;
+      line-height: 37px;
+      margin-bottom: 1.1rem;
+      margin-bottom: 50px;
+      // background: cyan;
+
+      & > a {
+         font-family: 'Source Sans Pro', sans-serif;
+      }
+   }
+
+   & > div {
+      position: relative;
+      & > input {
+         width: 100%;
+         height: 50px;
+         padding: 0 50px 0 25px;
+         background: #000;
+         border-radius: 24px;
+         color: #fff;
+         font-size: 15px;
+
+         &::placeholder {
+            font-size: 15px;
+         }
+      }
+      & > div {
+         position: absolute;
+         top: 50%;
+         right: 0;
+         transform: translateY(-50%);
+
+         text-align: center;
+         width: 50px;
+         line-height: 50px;
+         color: #fff;
+      }
+   }
+}
