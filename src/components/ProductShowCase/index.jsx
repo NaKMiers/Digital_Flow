@@ -16,11 +16,19 @@ function ProductShowCase() {
                   <FontAwesomeIcon icon={faEllipsis} />
                </div>
                <ul className={`${styles.filterMenu} ${openFilter ? styles.show : ''}`}>
-                  <li>All</li>
-                  <li>Branding</li>
-                  <li>Illustration</li>
-                  <li>Marketing</li>
-                  <li>Web Design</li>
+                  <li onClick={() => setFilters(prev => ({ ...prev, category: 'All' }))}>All</li>
+                  <li onClick={() => setFilters(prev => ({ ...prev, category: 'Branding' }))}>
+                     Branding
+                  </li>
+                  <li onClick={() => setFilters(prev => ({ ...prev, category: 'Illustration' }))}>
+                     Illustration
+                  </li>
+                  <li onClick={() => setFilters(prev => ({ ...prev, category: 'Marketing' }))}>
+                     Marketing
+                  </li>
+                  <li onClick={() => setFilters(prev => ({ ...prev, category: 'Web Design' }))}>
+                     Web Design
+                  </li>
                </ul>
 
                <div className={styles.filterLeft}>

@@ -15,7 +15,7 @@ function ImageLinkModal({ index, setImageIndex }) {
    const [autoPlay, setAutoPlay] = useState(false)
 
    const imageModalRef = useRef(null)
-   const imageModalBodyref = useRef(null)
+   const imageModalBodyRef = useRef(null)
    const playBarRef = useRef(null)
    const prevBtnRef = useRef(null)
    const nextBtnRef = useRef(null)
@@ -51,14 +51,14 @@ function ImageLinkModal({ index, setImageIndex }) {
 
    // handle click outside of modal content
    const handleClickOutside = e => {
-      if (imageModalBodyref.current && !imageModalBodyref.current.contains(e.target)) {
+      if (imageModalBodyRef.current && !imageModalBodyRef.current.contains(e.target)) {
          handleCloseImageModal()
       }
    }
 
    // handle zoom in
    const handleZomeIn = () => {
-      imageModalBodyref.current.classList.toggle(styles.zoomIn)
+      imageModalBodyRef.current.classList.toggle(styles.zoomIn)
    }
 
    // auto play
@@ -130,7 +130,7 @@ function ImageLinkModal({ index, setImageIndex }) {
             <FontAwesomeIcon icon={faArrowRight} />
          </button>
 
-         <div className={styles.imageModalBody} ref={imageModalBodyref}>
+         <div className={styles.imageModalBody} ref={imageModalBodyRef}>
             <img src={imageLinkItems[index]} alt='img' onClick={handleZomeIn} />
          </div>
       </div>
