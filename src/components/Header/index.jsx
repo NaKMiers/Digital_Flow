@@ -1,7 +1,7 @@
 import { faChevronDown, faPhone, faSearch } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { memo, useCallback, useEffect, useRef, useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import facebook from '../../assets/imgs/facebook.png'
 import instagram from '../../assets/imgs/instagram.png'
 import logo from '../../assets/imgs/logo.png'
@@ -97,26 +97,12 @@ function Header({ fixed }) {
       setOpenMenu(false)
    }, [])
 
-   // handle on press ESC
-   useEffect(() => {
-      const handleKeyPress = e => {
-         if (e.keyCode === 27) {
-            !openMenu ? handleShowMenu() : handleHideMenu()
-         }
-      }
-
-      window.addEventListener('keydown', handleKeyPress)
-      return () => {
-         window.removeEventListener('keydown', handleKeyPress)
-      }
-   }, [handleShowMenu, handleHideMenu, openMenu])
-
    return (
       <header className={`${styles.Header} ${fixed ? styles.fixed : ''}`} ref={headerRef}>
          {/* LOGO */}
-         <div className={styles.logo}>
+         <Link to='/' className={styles.logo}>
             <img src={logo} alt='logo' />
-         </div>
+         </Link>
 
          {/* SOCIALS */}
          <div className={styles.socialWrap}>
