@@ -108,7 +108,7 @@ function Footer() {
                   </a>
                </div>
                <p>
-                  © Copyright <span>CodexThemes</span>
+                  © Copyright <span>Digital Flow</span>
                </p>
             </div>
          </div>
